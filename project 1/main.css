@@ -1,0 +1,125 @@
+
+body{
+  min-height: 100%; overflow: auto;
+}
+h2{
+  font-family: Arial; font-weight:bold; font-size:13pt; color: #63c2b2;
+}
+section{
+  font-family: Arial; float: left;
+}
+div a{text-decoration: none;
+   }
+#navText {color:#cc3825; font-size: 15pt; margin-top: 80px; margin-left: 50px; width: 130px; height: 100vh;
+border: ;
+}
+ul{
+  list-style-type: none; margin:0; padding:0;
+}
+a{color: #cc3825
+}
+li a{
+  text-decoration: none;
+}
+li a:hover {margin-left:10px}
+.active{font-weight: bold;}
+
+#box{
+  padding: 5%;
+}
+/*grid containters*/
+.grid-container1{
+  border: ;
+  display:grid;
+  float: right;
+  margin-right: 10%;
+  margin-top: 7%;
+  grid-column-gap: 100px;
+  grid-row-gap: 100px;
+  width:60vw; height:auto;
+  grid-template-columns: 125px 125px 125px 125px ;
+  grid-template-rows: 125px 125px 125px ;
+  justify-content:space-between;
+}
+
+.grid-container2{
+  border: ;
+  display:grid;
+  float: right;
+  margin-right: 10%;
+  margin-top: 7%;
+  grid-column-gap: 100px;
+  grid-row-gap: 100px;
+  width:60vw; height:auto;
+  grid-template-columns: 160px 160px 160px ;
+  grid-template-rows: 160px 160px 160px ;
+  justify-content:space-between;
+}
+.video{
+  position:relative;
+  float:right
+}
+
+.vid{
+
+transform: scale(.75, .75);
+}
+
+img.sphoto{
+  object-fit: cover;
+  height:170px; width: 170px;
+}
+img.smoving{
+  object-fit: cover;
+  height:170px; width: 170px;
+}
+
+img.thumbnail{ height: 100%; width: 100%;
+}
+
+.overlay{
+    display:;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  rgba(124, 145, 130, 0.7);
+    z-index: 5;
+
+  }
+#box h2{
+  display: inline-block;
+}
+
+.left{
+
+  z-index: 7;
+  width: 10%; height: 15%;
+  top:50%;
+  left:50%;
+  transform: translate(-460%, -50%);
+  position: fixed;
+}
+
+.right{
+
+ z-index: 7;
+ width: 10%; height:15%;
+ top:50%;
+ left:50%;
+ transform: translate(410%,-50%);
+ position:fixed
+}
+
+.toShow{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%; width: 70%;
+    position: fixed;
+    background-color: #ebf7b5;
+    z-index: 6;
+    overflow-y: auto;
+
+  }
