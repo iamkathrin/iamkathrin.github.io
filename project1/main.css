@@ -1,8 +1,9 @@
 
+
 body{
   min-height: 100%; overflow: auto;
 }
-h2{
+.mySlides{
   font-family: Arial; font-weight:bold; font-size:13pt; color: #63c2b2;
 }
 section{
@@ -74,11 +75,14 @@ img.smoving{
   height:170px; width: 170px;
 }
 
+.thumbnail:hover{
+  cursor: pointer
+}
 img.thumbnail{ height: 100%; width: 100%;
 }
 
-.overlay{
-    display:;
+.modal{
+    display:none;
     position: fixed;
     top: 0;
     left: 0;
@@ -86,12 +90,33 @@ img.thumbnail{ height: 100%; width: 100%;
     width: 100%;
     background-color:  rgba(124, 145, 130, 0.7);
     z-index: 5;
-
-  }
-#box h2{
-  display: inline-block;
 }
 
+
+.modal-content{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%; width: 70%;
+    position: relative;
+    background-color: #ebf7b5;
+    z-index: 6;
+    overflow-y: auto;
+}
+.close-cursor:hover{
+  color: red;
+  cursor: pointer;
+}
+.close-cursor {
+  user-select: none;
+  position: absolute;
+  top:10px;
+  right: 25px;
+}
+.mySlides{
+  z-index: 7
+
+}
 .left{
 
   z-index: 7;
@@ -111,15 +136,3 @@ img.thumbnail{ height: 100%; width: 100%;
  transform: translate(410%,-50%);
  position:fixed
 }
-
-.toShow{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 80%; width: 70%;
-    position: fixed;
-    background-color: #ebf7b5;
-    z-index: 6;
-    overflow-y: auto;
-
-  }
