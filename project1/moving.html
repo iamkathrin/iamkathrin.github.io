@@ -5,14 +5,14 @@
 <style media="screen">
 body {
   background-color:#d8d4e5;
-
+ @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
 }
 </style>
 
 </head>
 <body>
 <section id="navText">
-<div class="web"> <a href="../index.html">
+<div id="name" class="web"> <a href="../index.html">
     katherine x.
   <a>
 </div>
@@ -38,18 +38,45 @@ body {
 
 <div class="grid-container2">
 
-  <img src="moving/smallescape.jpg" alt="small_escape" class="smoving">
-  <img src="moving/moths.gif" alt="moths" class="smoving">
-  <img src="moving/stars.png" alt="fallen stars" class="smoving">
-  <img src="moving/imstuck.png" alt="honey" class="smoving">
-  <img src="moving/ani1.gif" alt="fall" class="smoving">
-
-
-
-
+  <img src="moving/smallescape.jpg" alt="small_escape" class="smoving" onclick="openModal();currentSlide2(1)">
+  <img src="moving/moths.png" alt="moths" class="smoving" onclick="openModal();currentSlide2(2)">
+  <img src="moving/star.png" alt="fallen stars" class="smoving" onclick="openModal();currentSlide2(3)">
+  <img src="moving/imstuk.png" alt="honey" class="smoving" onclick="openModal();currentSlide2(4)">
+  <img src="moving/ani1.png" alt="fall" class="smoving" onclick="openModal();currentSlide2(5)">
 
 </div>
+<div id="myModal" class="modal">
 
+  <span class="close-cursor" onclick="closeModal()">close</span>
 
+  <div class="modal-content2">
+    <div class="mySlides2">
+      <img src="moving/smallescape.jpg" alt="small_escape" style="height:90vh; width: auto;">
+    </div>
+    <div class="mySlides2">
+      <img src="moving/moths.gif" alt="moths" style="height:90vh; width: auto;">
+    </div>
+    <div class="mySlides2">
+      <img src="moving/stars.png" alt="fallen stars" style="height:90vh; width: auto;">
+    </div>
+    <div class="mySlides2">
+      <img src="moving/imstuck.png" alt="honey" style="height:90vh; width: auto;">
+    </div>
+    <div class="mySlides2">
+      <img src="moving/ani1.gif" alt="fall" style="height:auto; width: 90vh;">
+    </div>
+  </div>
+
+  <div id="leftB"class="left" onclick="plusSlides2(-1)">
+  <img class="leftButton" style="height: 120px; width: 120px; position:absolute;" src="left.png" alt="left">
+  </div>
+
+  <div id="rightB"class="right" onclick="plusSlides2(1)">
+  <img class="rightButton" style="height: 120px; width: 120px; " src="right.png" alt="right">
+  </div>
+
+</div>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>

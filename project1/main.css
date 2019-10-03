@@ -1,4 +1,6 @@
-
+#name{
+  font-family: 'Share Tech Mono', monospace; font-size: 27px;
+}
 
 body{
   min-height: 100%; overflow: auto;
@@ -11,7 +13,7 @@ section{
 }
 div a{text-decoration: none;
    }
-#navText {color:#cc3825; font-size: 15pt; margin-top: 80px; margin-left: 50px; width: 130px; height: 100vh;
+#navText {color:#cc3825; font-size: 15pt; margin-top: 80px; margin-left: 50px; width: 180px; height: 100vh;
 border: ;
 }
 ul{
@@ -25,9 +27,7 @@ li a{
 li a:hover {margin-left:10px}
 .active{font-weight: bold;}
 
-#box{
-  padding: 5%;
-}
+
 /*grid containters*/
 .grid-container1{
   border: ;
@@ -66,9 +66,16 @@ li a:hover {margin-left:10px}
 transform: scale(.75, .75);
 }
 
+.sphoto:hover{
+  cursor:pointer;
+}
 img.sphoto{
   object-fit: cover;
   height:170px; width: 170px;
+}
+
+.smoving:hover{
+  cursor:pointer;
 }
 img.smoving{
   object-fit: cover;
@@ -97,11 +104,19 @@ img.thumbnail{ height: 100%; width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 80%; width: 70%;
+    height: auto; width: 70%;
     position: relative;
     background-color: #ebf7b5;
     z-index: 6;
     overflow-y: auto;
+}
+.modal-content2{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto; width: 70%;
+    position: fixed;
+    z-index: 6;
 }
 .close-cursor:hover{
   color: red;
@@ -115,10 +130,21 @@ img.thumbnail{ height: 100%; width: 100%;
 }
 .mySlides{
   z-index: 7
-
 }
-.left{
 
+.mySlides2{
+  z-index: 7
+}
+div.mySlides{
+  padding:100px;
+  line-height: 150%;
+}
+div.mySlides2{
+  text-align: center;
+}
+
+
+.left{
   z-index: 7;
   width: 10%; height: 15%;
   top:50%;
@@ -135,4 +161,10 @@ img.thumbnail{ height: 100%; width: 100%;
  left:50%;
  transform: translate(410%,-50%);
  position:fixed
+}
+.left:hover{
+  cursor:pointer
+}
+.right:hover{
+  cursor:pointer
 }
