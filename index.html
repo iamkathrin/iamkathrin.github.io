@@ -8,22 +8,25 @@ body {
 
 @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
 
+overflow: hidden;
 
 }
 </style>
 
 </head>
-<body>
+<body style="margin:2">
 <section id="navText">
 <div id="name"class="web"> <a href="index.html">
     katherine x.
-  <a>
+  </a>
 </div>
 
 
-<div class="">
-  <img src="project1/stillprofile.png" alt="small fox" id="fox" style="height:125px; width:125px; margin-left:-2px">
-</div>
+
+  <img src="project1/stillprofile.png" id="fox" alt="small fox" style="height:125px; width:125px; margin-left:-2px" onclick="playGif()"/>
+
+  <img id="largefox" src="project1/web2.gif" style="height:100%;width:100%;top:0;left:0; position:fixed; z-index:5; display:none;"/>
+
 
 
 <nav>
@@ -34,24 +37,34 @@ body {
     <li><a href="project1/photo.html">photo.</a></li>
     <li><a href="project1/moving.html">illustration.</a></li>
     <br>
-    <li>contact.</li>
+    <li>contact:</li>
+    <li>
+    <a href = "mailto: kzxiang@usc.edu">
+      <img src="project1/mail.png" alt="mail" style="width:100px; height:50px; margin-left:3px;">
+    </a>
+    </li>
   </ul>
 </nav>
 </section>
 
-<div class="frontpage">
-  <video width="340" height="340" controls style="border:solid; border-color:#202233; float:left;">
-    <source src="project1/videos/put.mp4" type="video/mp4"></video>
+<img src="project1/grassland.gif" alt="grassland"
+style="top:50%; left:50%; height:auto; width:60vw;
+transform: translate(20%,10%); border: solid; border-color:#cc3825; border-width: 2px; padding:7px">
 
-</div>
-<h2 id="intro"> welcome. this is katherine xiang. the song is <i>summer</i> by jannabi.</h2>
+
 
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
-<script type="text/javascript">
-  $('#fox').click(function () {
-    $('')
-  });
+<script type="text/javascript"></script>
+<script>
+function playGif() {
+  var el1 = document.getElementById("fox");
+  var el2 = document.getElementById("largefox");
+  el1.src = "project1/stillprofile.gif";
+  setTimeout(function() { el1.src="project1/stillprofile.png";}, 2600);
+  setTimeout(function() { el2.style.display = "block"; },100);
+  setTimeout(function() { el2.style.display = "none"; }, 2500);
+}
 </script>
 </body>
 </html>

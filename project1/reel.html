@@ -18,9 +18,8 @@ body {
 </div>
 
 
-<div class="">
-  <img src="stillprofile.png" alt="small fox" style="height:125px; width:125px; margin-left:-2px">
-</div>
+<img src="stillprofile.png" id="fox" alt="small fox" style="height:125px; width:125px; margin-left:-2px" onclick="playGif()"/>
+<img id="largefox" src="web2.gif" style="height:100%;width:100%;top:0;left:0; position:fixed; z-index:5; display:none;"/>
 
 
 <nav>
@@ -31,7 +30,12 @@ body {
     <li><a href="photo.html">photo.</a></li>
     <li><a href="moving.html">illustration.</a></li>
     <br>
-    <li>contact.</li>
+    <li>contact:</li>
+    <li>
+    <a href = "mailto: kzxiang@usc.edu">
+      <img src="mail.png" alt="mail" style="width:100px; height:50px; margin-left:3px;">
+    </a>
+    </li>
   </ul>
 </nav>
 </section>
@@ -41,7 +45,7 @@ body {
 
 
 </div>
-
-
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>

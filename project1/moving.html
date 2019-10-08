@@ -18,9 +18,9 @@ body {
 </div>
 
 
-<div class="">
-  <img src="stillprofile.png" alt="small fox" style="height:125px; width:125px; margin-left:-2px">
-</div>
+<img src="stillprofile.png" id="fox" alt="small fox" style="height:125px; width:125px; margin-left:-2px" onclick="playGif()"/>
+<img id="largefox" src="web2.gif" style="height:100%;width:100%;top:0;left:0; position:fixed; z-index:5; display:none;"/>
+
 
 
 <nav>
@@ -31,23 +31,31 @@ body {
     <li><a href="photo.html">photo.</a></li>
     <li><a href="moving.html" class="active">illustration.</a></li>
     <br>
-    <li>contact.</li>
+    <li>contact:</li>
+    <li>
+    <a href = "mailto: kzxiang@usc.edu">
+      <img src="mail.png" alt="mail" style="width:100px; height:50px; margin-left:3px;">
+    </a>
+    </li>
   </ul>
 </nav>
 </section>
 
 <div class="grid-container2">
 
-  <img src="moving/smallescape.jpg" alt="small_escape" class="smoving" onclick="openModal();currentSlide2(1)">
-  <img src="moving/moths.png" alt="moths" class="smoving" onclick="openModal();currentSlide2(2)">
-  <img src="moving/star.png" alt="fallen stars" class="smoving" onclick="openModal();currentSlide2(3)">
-  <img src="moving/imstuk.png" alt="honey" class="smoving" onclick="openModal();currentSlide2(4)">
-  <img src="moving/ani1.png" alt="fall" class="smoving" onclick="openModal();currentSlide2(5)">
+  <img src="moving/smallescape.jpg" alt="bog" class="smoving" onclick="openModal();currentSlide2(1)" >
+  <img src="moving/moths.png" alt="moths" class="smoving" onclick="openModal();currentSlide2(2)" >
+  <img src="moving/star.png" alt="fallen stars" class="smoving" onclick="openModal();currentSlide2(3)" >
+  <img src="moving/imstuk.png" alt="honey" class="smoving" onclick="openModal();currentSlide2(4)" >
+  <img src="moving/ani1.png" alt="fall" class="smoving" onclick="openModal();currentSlide2(5)" >
+  <img src="moving/pp.jpg" alt="bird" class="smoving" onclick="openModal();currentSlide2(6)" >
 
 </div>
+
+
 <div id="myModal" class="modal">
 
-  <span class="close-cursor" onclick="closeModal()">close</span>
+  <div class="close-cursor" onclick="closeModal()"><img src="closex.png" alt="close" style="width:100px; height:50px;"></div>
 
   <div class="modal-content2">
     <div class="mySlides2">
@@ -64,6 +72,9 @@ body {
     </div>
     <div class="mySlides2">
       <img src="moving/ani1.gif" alt="fall" style="height:auto; width: 90vh;">
+    </div>
+    <div class="mySlides2">
+      <img src="moving/pp.gif" alt="bird" style="height:90vh; width: auto;">
     </div>
   </div>
 

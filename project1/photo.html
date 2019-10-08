@@ -17,10 +17,8 @@ body {
     <a>
   </div>
 
-  <div class="">
-    <img src="stillprofile.png" alt="small fox" style="height:125px; width:125px; margin-left:-2px">
-  </div>
-
+  <img src="stillprofile.png" id="fox" alt="small fox" style="height:125px; width:125px; margin-left:-2px" onclick="playGif()"/>
+  <img id="largefox" src="web2.gif" style="height:100%;width:100%;top:0;left:0; position:fixed; z-index:5; display:none;"/>
 
 <nav>
   <ul>
@@ -30,23 +28,57 @@ body {
     <li><a href="photo.html" class="active">photo.</a></li>
     <li><a href="moving.html">illustration.</a></li>
     <br>
-    <li>contact.</li>
+    <li>contact:</li>
+    <li>
+    <a href = "mailto: kzxiang@usc.edu">
+      <img src="mail.png" alt="mail" style="width:100px; height:50px; margin-left:3px;">
+    </a>
+    </li>
   </ul>
 </nav>
 </section>
 <div class="grid-container2">
 
-  <img src="photo/jar.png" alt="jar" class="sphoto" >
+  <img src="photo/jar.png" alt="jar" class="sphoto" onclick="openModal(1);currentSlide2(1);">
   <img src="photo/utensils.jpg" alt="utensils" class="sphoto"
-  style="transform: rotate(-90deg)">
-  <img src="photo/r001-027.jpg" alt="cpark" class="sphoto">
+  style="transform: rotate(-90deg)"onclick="openModal(2);currentSlide2();">
+  <img src="photo/r001-027.jpg" alt="cpark" class="sphoto"onclick="openModal();currentSlide2()">
   <img src="photo/amanda.jpg" alt="amanda" class="sphoto">
-  <img src="photo/nostalgia.jpg" alt="dexposed" class="sphoto">
-  <img src="photo/hous.jpg" alt="sunset house" class="sphoto">
+  <img src="photo/nostalgia.jpg" alt="dexposed" class="sphoto"onclick="openModal();currentSlide2()">
+  <img src="photo/hous.jpg" alt="sunset house" class="sphoto"onclick="openModal();currentSlide2()">
 
 
 </div>
 
+<div id="myModal" class="modal">
+
+  <span class="close-cursor" onclick="closeModal()"><img src="closex.png" alt="close" style="width:100px; height:50px;"></span>
+
+  <div class="modal-content2">
+    <div class="mySlides2">
+      <img src="photo/bigjar.png" alt="bigjar" style="height:90vh; width: auto;">
+    </div>
+    <div class="mySlides2">
+      <img src="photo/inhouse2.jpg" alt="jar2" style="width:90vh; height: auto;transform: rotate(-90deg)">
+    </div>
+    <div class="mySlides2">
+      <img src="photo/inhouse5.JPG" alt="chair" style="height:auto; width: 90vh;">
+    </div>
+    <div class="mySlides2">
+      <img src="photo/inhouse3.JPG" alt="hall" style="height:90vh; width: auto;">
+    </div>
+
+</div>
+
+  <div id="leftB"class="left" onclick="plusSlides2(-1)">
+  <img class="leftButton" style="height: 120px; width: 120px; position:absolute;" src="left.png" alt="left">
+  </div>
+
+  <div id="rightB"class="right" onclick="plusSlides2(1)">
+  <img class="rightButton" style="height: 120px; width: 120px; " src="right.png" alt="right">
+  </div>
+
+</div>
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
 </body>

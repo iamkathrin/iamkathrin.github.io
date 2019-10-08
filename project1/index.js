@@ -58,3 +58,12 @@ for (i=0; i< dots.length; i++){
 slides[slideindex-1].style.display="block";
 dots[slideindex-1].className += " active";
 }
+
+function playGif() {
+  var el1 = document.getElementById("fox");
+  var el2 = document.getElementById("largefox");
+  el1.src = "stillprofile.gif";
+  setTimeout(function() { el1.src="stillprofile.png";}, 2500);
+  setTimeout(function() { el2.style.display = "block"; });
+  setTimeout(function() { el2.style.display = "none"; }, 2500);
+}
