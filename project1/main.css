@@ -31,20 +31,8 @@ li a{
 li a:hover {margin-left:10px}
 .active{font-weight: bold;}
 
-.frontpage{
-  float:right;
-  width: 40vw;
-  margin-right: 10%;
-  margin-top: 10%;
-}
-#intro{
 
-  position:fixed;
-  margin-top: 7%;
-  margin-left: 40%;
-  font-family: Arial;font-size: 15pt;
-  color: #202233;
-}
+
 /*grid containters*/
 .grid-container1{
   border: ;
@@ -60,8 +48,29 @@ li a:hover {margin-left:10px}
   justify-content:space-between;
 }
 
+.captionText{
+  font-family: Arial;font-size: 12pt;
+  color: #521349;
+  text-align: center;
+  position:absolute;
+  opacity: 0;
+  transition: .7s;
+}
+.captionText{
+  font-family: Arial;font-size: 12pt;
+  color: #521349;
+  text-align: center;
+  position:absolute;
+  opacity: 0;
+  transition: .7s;
+}
+.smoving:hover + figcaption.captionText,
+.sphoto:hover + figcaption.captionText{
+  opacity: 1;
+}
+
 .grid-container2{
-  border: ;
+
   display:grid;
   float: right;
   margin-right: 10%;
@@ -76,24 +85,28 @@ li a:hover {margin-left:10px}
 .video{
   position:relative;
   float:right;
+  border:solid;
+  border-color:#cc3825; border-width: 2px;
+  margin-top: 5%;
+  margin-right: 5%;
 
 }
 
 .vid{
 
-transform: scale(.75, .75);
+transform: scale(.95, .95);
 }
 
-.sphoto:hover{
-  cursor:pointer;
-}
 img.sphoto{
   object-fit: cover;
   height:170px; width: 170px;
 }
 
-.smoving:hover{
+.smoving:hover, .sphoto:hover{
   cursor:pointer;
+  border:dotted;
+  border-width: 2px;
+  border-color: #f1e1f7;
 }
 img.smoving{
   object-fit: cover;
@@ -144,7 +157,7 @@ img.thumbnail{ height: 100%; width: 100%;
   position:fixed;
   top:50%;
   left:50%;
-  transform: translate(580%, -710%);
+  transform: translate(590%, -710%);
   z-index: 7;
 }
 .mySlides{
