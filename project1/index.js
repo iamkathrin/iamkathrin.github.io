@@ -28,7 +28,7 @@ function showSlides(n) {
 for (i=0; i< dotz.length; i++){
   dotz[i].className = dotz[i].className.replace (" active","");
 }
-slidez[slideIndex-1].style.display="block";
+slidez[slideIndex-1].style.display= "block";
 dotz[slideIndex-1].className += " active";
 }
 
