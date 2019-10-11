@@ -161,11 +161,11 @@ img.thumbnail{ height: 100%; width: 100%;
   z-index: 7;
 }
 .mySlides{
-  z-index: 7
+  z-index: 7;
 }
 
 .mySlides2{
-  z-index: 7
+  z-index: 7;
 }
 div.mySlides{
   padding:100px;
@@ -173,7 +173,7 @@ div.mySlides{
 }
 div.mySlides2{
   text-align: center;
-  
+
 }
 
 
