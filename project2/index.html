@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <head>
   <title>Home</title>
-  <link rel="stylesheet" href="project2/main.css">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="box">
+    <img src="imag/1black.png" alt="background" style="position: fixed; z-index:0">
+    <img src="gfile/1falling.gif" class="gif" alt="petal" style=" position: fixed; z-index:2">
+    <img src="gfile/firstclick.gif" usemap="#workmap" class="gif" alt="firstclick" style="position: fixed; z-index:3" id="firstclick" >
+    <map name="workmap">
+      <area shape="circle" coords="610,412,100"  onmouseover="sizeUp()" onmouseout="sizeDown()" onclick="playTransition()">
+    </map>
+      <img src="gfile/entranceunder.gif" id="entranceUnder"alt="entranceunder" style="position:fixed; display: none; z-index:5;">
+      <img src="gfile/entrancegirl.gif" id="entranceGirl"alt="entrancegirl" style="position:fixed; display: none; z-index:6;">
+      <img src="gfile/entranceloop.gif" usemap="#workmap2" id="entranceLoop"alt="entranceloop" style="position:fixed; display: none; z-index:7;">
+    <map name="workmap2">
+        <area shape="circle" coords="900,220,50" onclick="playTransition2()">
+    </map>
+      <img src="gfile/herclose.gif" alt="herclose" id="herClose" style="position:fixed; display: none; z-index:8;">
 
+
+
+
+    <div class="textTop" style=" position:fixed; ">
+      made in 2001
+    </div>
+<nav class="choiceBox">
+  
+
+</nav>
+
+
+    </video>
+  </div>
 
   <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
+
 </body>
 </html>

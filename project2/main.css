@@ -1,0 +1,49 @@
+body{
+  background-color: black;
+  margin:0;
+  min-height: 100%; overflow: hidden;
+  /* font-family: 'Alegreya', serif; */
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-style: medium;
+  color: #ebf5ec;
+}
+
+.box{
+  display:grid;
+  grid-template-columns: 1250px ;
+  grid-template-rows: 800px ;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border:solid;
+  }
+
+
+
+img{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto; width: 85%;
+  justify-content: center;
+  border: 10px;
+  border-color: blue;
+}
+
+.textTop{top:.7vh; z-index: 1}
+
+.choiceBox{ z-index:20;
+  display: none;
+  padding:10px;
+  text-align: center;
+  position: fixed;
+  height: 35vh;
+  width: 50vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #8e6394;
+  opacity: .4;
+  border-color: black;
+}
