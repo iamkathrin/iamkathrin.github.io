@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="box">
+    <img src="imag/homeicon.png" class="home" alt="homeicon">
+    <img src="imag/mapunlocked.png" id="map" alt="mapunlocked" style="position:fixed; z-index:14; display:none;">
+    <img src="gfile/kickbed.gif" id="kickbed"alt="kickbed" style= "z-index:3; position:fixed;">
+    <img src="gfile/kickbedloop.gif" id="kickbedloop"alt="kickbedloop" style= "z-index:4; display: none;position:fixed;">
+
+
+
+
+
+
+    <div class="textTop" style=" position:fixed; font-size: 12px">
+      made in 2001
+    </div>
+
+
+
+  </div>
+
+  <script type="text/javascript">
+  window.onload = function(){
+    var b1= document.getElementById('kickbedloop');
+ setTimeout(function(){b1.style.display= "block";}, 1550);
+};
+</script>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
