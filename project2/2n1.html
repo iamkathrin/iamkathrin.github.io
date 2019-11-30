@@ -10,18 +10,22 @@
     <img src="gfile/rightafterloop.gif" alt="rightafterloop" style="position:fixed; z-index:2">
     <img src="imag/maplocked.png" id="map2" alt="maplocked" style="position:fixed; z-index:14; display:none" usemap="#maplocked">
     <map name="maplocked">
-      <area shape="circle" coords="435,340,37" onclick="toTVn1()">
-      <area shape="circle" coords="740,310,30" onclick="toEatn1()">
-      <area shape="circle" coords="730,410,35" onclick="toBRn1()">
-      <area shape="rect" coords="390,420,475,460" onclick="toBedn1()">
-      <area shape="rect" coords="545,362,640,405" onclick="noAccess()">
+      <area shape="rect" coords="437,324,500,386" onclick="toTVn1()">
+      <area shape="circle" coords="793,335,30" onclick="toEatn1()">
+      <area shape="circle" coords="789,439,31" class="bathroom">
+      <area shape="rect" coords="425,455,513,491" onclick="toBedn1()">
+      <area shape="rect" coords="591,393,679,429" onclick="noAccess()">
+
+      <map name="switch">
+        <area shape="rect" coords="940,280,977,333" onclick="onOff()">
+      </map>
 
 
     <img class="room" id="tvday1" src="gfile/tvday1.gif" alt="tvday1">
     <img class="room" id="kitchenday1" src="gfile/kitchenday1.gif" alt="kitchenday1">
     <img class="room" id="brday1" src="gfile/brday1.gif" alt="brday1">
     <img class="room" id="brday1loop" src="gfile/brday1loop.gif" alt="brday1loop">
-    <img class="room" id="bedroom1" src="gfile/bedroomclickstay1.gif" alt="bedroomclickstay1">
+    <img class="room" id="bedroom1" src="gfile/bedroomclickstay1.gif" alt="bedroomclickstay1" usemap="#switch">
     <img class="room" id="locked" src="imag/locked.png" alt="locked">
 
 

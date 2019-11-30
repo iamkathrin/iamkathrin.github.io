@@ -1,3 +1,4 @@
+imageMapResize();
 function sizeUp() {
     $('#workmap').css({'cursor': 'pointer'});
 }
@@ -60,11 +61,12 @@ $(".home2").click(function(){
 $(".home").click(function(){
   $("#map").toggle();
 });
-
+ // first night
 function toTVn1(){
   var tv1=document.getElementById("tvday1");
   tv1.style.display="block";
   tv1.style.zIndex= "5";
+  $("#kitchenday1, #brday1, #brday1loop, #bedroom1, #herRoom1").css("display","none");
   $("#map").toggle();
   $("#map2").toggle();
 
@@ -74,27 +76,56 @@ function toEatn1(){
   var eat1 =document.getElementById("kitchenday1");
   eat1.style.display="block";
   eat1.style.zIndex="5";
+  $("#tvday1, #brday1, #brday1loop, #bedroom1, #herRoom1").css("display","none");
   $("#map").toggle();
   $("#map2").toggle();
 
 }
-function toBRn1(){
-  var br1 =document.getElementById("brday1");
-  var br1loop= document.getElementById("brday1loop")
-  br1.style.display="block";
-  br1.style.zIndex="5";
-  setTimeout(function(){br1loop.style.display="block"; br1loop.style.zIndex="6"},1600);
-  $("#map").toggle();
-  $("#map2").toggle();
-  
-}
+
+var clicks =0;
+$('.bathroom').click(function(){
+   if (clicks==0){
+     var br1 =document.getElementById("brday1");
+      var br1loop= document.getElementById("brday1loop")
+      br1.style.display="block";
+      br1.style.zIndex="5";
+      br1loop.style.zIndex="5";
+      setTimeout(function(){br1loop.style.display="block";},1600);
+      setTimeout(function(){br1.style.display="none";},1600);
+      $("#kitchenday1, #tvday1, #bedroom1, #herRoom1").css("display","none");
+      $("#map").toggle();
+      $("#map2").toggle();
+   }else{
+      var br1loop= document.getElementById("brday1loop")
+      br1loop.style.display="block";
+      br1loop.style.zIndex="5";
+      $("#kitchenday1, #tvday1, #brday1, #bedroom1, #herRoom1").css("display","none");
+      $("#map").toggle();
+      $("#map2").toggle();
+   }
+   ++clicks;
+});
+
 function toBedn1(){
-
+  $("#bedroom1").css("display","block");
+  $("#bedroom1").css("zIndex","5");
+  $("#tvday1, #brday1, #brday1loop, #kitchenday1, #herRoom1").css("display","none");
+  $("#map").toggle();
+  $("#map2").toggle();
 }
 function toHern1(){
+  $("#herRoom1").css("display","block");
+  $("#herRoom1").css("zIndex","5");
+  $("#tvday1, #brday1, #brday1loop, #kitchenday1, #bedroom1").css("display","none");
+  $("#map").toggle();
+  $("#map2").toggle();
 
 }
 function noAccess(){
+  var lck= document.getElementById("locked");
+  lck.style.display="block";
+  setTimeout(function() {lck.style.opacity="1"; lck.style.transition =".5s";},0);
+  setTimeout(function() {lck.style.opacity="0"; lck.style.transition =".5s";},1500);
+  setTimeout(function() { lck.style.display="none";},2000);
 
 }
-imageMapResize();
