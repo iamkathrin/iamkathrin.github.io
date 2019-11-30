@@ -7,11 +7,27 @@ body{
   font-size: 20px;
   font-style: medium;
   color: #ebf5ec;
+  min-width:800px;
+  min-height: 1250px;
 }
 li {color:white;}
-li a {margin-left:10px; cursor: pointer;}
+li a {cursor: pointer;}
+li a:hover{margin-left:15px; }
 
+.cap{
+  position:fixed;
+  font-size:20px;
+  color: white;
+  z-index: 10;
+  max-width: 80%; height: auto;
+  text-align:center;
+  bottom: 8vh;
+  opacity: 0;
+}
 
+.room{
+  display: none; position: fixed;
+}
 .box{
   display:grid;
   grid-template-columns: 1250px ;
@@ -42,7 +58,7 @@ img{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: auto; width: 85%;
+  height: 800px; width: 1250px;
   justify-content: center;
   border: 10px;
   border-color: blue;
@@ -62,10 +78,4 @@ li{list-style-type: none;}
   width: 400px;
   top:4vh;
   left:6vw;
-}
-
-
-.caption{
-  background-color: black;
-  opacity: .7;
 }

@@ -19,9 +19,12 @@
         <area shape="circle" coords="900,220,50" onclick="playTransition2()">
     </map>
       <img src="gfile/herclose.gif" alt="herclose" id="herClose" style="position:fixed; display: none; z-index:8;">
-  <div class="textTop" style=" position:fixed; font-size: 12px">
+  <div id="caption" class="cap">
+  <span style="background-color:black;">  A girl from another country arrives to stay. She is very sweet and also obviously very lonely. </span>
+  </div>
+  <!-- <div class="textTop" style=" position:fixed; font-size: 12px">
       made in 2001
-    </div>
+    </div> -->
 <nav id="choiceBox">
   <ul>
     <li onclick="goTo1n1()"><a> - fall for her </a></li>
@@ -36,6 +39,18 @@
 
   <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="imageMapResizer.min.js"></script>
+  <script type="text/javascript"src="jquery.rwdImageMaps.js"></script>
+  <script type="text/javascript" src="imageMap.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  $('map').imageMapResize();
+});
+
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+});
+  </script>
 
 </body>
 </html>
