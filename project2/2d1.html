@@ -28,7 +28,11 @@
     <img class="room" id="bedroom1" src="gfile/bedroomclickstay1.gif" alt="bedroomclickstay1" usemap="#switch">
     <img class="room" id="locked" src="imag/locked.png" alt="locked">
 
-    
+    <img src="imag/switchon.png" id="switchon" alt="switchon" usemap="#off">
+      <map name="off">
+        <area shape="rect" coords="544,294,656,400" onclick="turnOff()">
+      </map>
+    <img src="imag/switchoff.png" id="switchoff" alt="switchoff">
 
 
 
@@ -41,9 +45,14 @@
 
   </div>
 
+  <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="imageMapResizer.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  $('map').imageMapResize();
+});
+  </script>
 
-<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="index.js"></script>
-<script type="text/javascript" src="imageMapResizer.min.js"></script>
 </body>
 </html>

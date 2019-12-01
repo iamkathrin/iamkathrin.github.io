@@ -54,6 +54,12 @@ li a:hover{margin-left:15px; }
   cursor: pointer;
 }
 
+#switchon, #switchoff{
+  display:none;
+  position:fixed;
+  z-index: 16
+}
+
 img{
   top: 50%;
   left: 50%;

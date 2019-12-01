@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="box">
+    <img src="imag/homeicon.png" class="home" alt="homeicon">
+    <img src="imag/mapunlocked.png" id="map" alt="mapunlocked" style="position:fixed; z-index:14; display:none;" usemap="#mapunlocked">
+      <map name="mapunlocked">
+        <area shape="rect" coords="437,324,500,386" onclick="toTVn1()">
+        <area shape="circle" coords="793,335,30" onclick="toEatn1()">
+        <area shape="circle" coords="789,439,31" class="bathroom">
+        <area shape="rect" coords="425,455,513,491" onclick="toBedn1()">
+        <area shape="rect" coords="591,393,679,429" onclick="toHern1()">
+      </map>
+    <img src="gfile/kickbed.gif" id="kickbed"alt="kickbed" style= "z-index:3; position:fixed;">
+    <img src="gfile/kickbedloop.gif" id="kickbedloop"alt="kickbedloop" style= "z-index:4; display: none;position:fixed;" usemap="#switch">
+      <map name="switch">
+        <area shape="rect" coords="940,280,977,333" onclick="onOff()">
+      </map>
+
+    <img class="room" id="tvday1" src="gfile/tvday1.gif" alt="tvday1">
+    <img class="room" id="kitchenday1" src="gfile/kitchenday1.gif" alt="kitchenday1">
+    <img class="room" id="brday1" src="gfile/brday1.gif" alt="brday1">
+    <img class="room" id="brday1loop" src="gfile/brday1loop.gif" alt="brday1loop">
+    <img class="room" id="bedroom1" src="gfile/bedroomclickstay1.gif" alt="bedroomclickstay1" usemap="#switch">
+    <img class="room" id="herRoom1" src="gfile/joinhernight1loop.gif" alt="joinhernight1loop">
+
+<!-- switch -->
+    <img src="imag/switchon.png" id="switchon" alt="switchon" usemap="#off">
+      <map name="off">
+        <area shape="rect" coords="544,294,656,400" onclick="turnOff()">
+      </map>
+    <img src="imag/switchoff.png" id="switchoff" alt="switchoff">
+
+
+    <div id="caption2" class="cap" style="top:8vh;">
+    <span style="background-color:black;"> aaaAAaaaAAAAaaAAoh no </span>
+    </div>
+
+  <div class="textTop" style=" position:fixed; font-size: 12px">
+      made in 2001
+    </div>
+
+
+
+  </div>
+
+  <script type="text/javascript">
+  window.onload = function(){
+    var c2= document.getElementById("caption2")
+    var b1= document.getElementById('kickbedloop');
+ setTimeout(function(){b1.style.display= "block";}, 1550);
+ c2.style.opacity="1"; c2.style.transition ="1s";
+ setTimeout(function() {c2.style.opacity="0"; c2.style.transition ="1s";},1550);
+
+
+};
+
+</script>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="imageMapResizer.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('map').imageMapResize();
+});
+</script>
+
+</body>
+</html>

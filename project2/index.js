@@ -1,4 +1,4 @@
-imageMapResize();
+
 function sizeUp() {
     $('#workmap').css({'cursor': 'pointer'});
 }
@@ -46,11 +46,11 @@ function playTransition2(){
   setTimeout(function() {c1.style.opacity="0"; c1.style.transition ="1s";},0);
 }
 
-function goTo1n1() {
-window.location.href = "1n1.html"
+function goTo1d1() {
+window.location.href = "1d1.html"
 }
-function goTo2n1() {
-window.location.href = "2n1.html"
+function goTo2d1() {
+window.location.href = "2d1.html"
 }
 
 
@@ -119,7 +119,6 @@ function toHern1(){
   $("#tvday1, #brday1, #brday1loop, #kitchenday1, #bedroom1").css("display","none");
   $("#map").toggle();
   $("#map2").toggle();
-
 }
 function noAccess(){
   var lck= document.getElementById("locked");
@@ -127,5 +126,16 @@ function noAccess(){
   setTimeout(function() {lck.style.opacity="1"; lck.style.transition =".5s";},0);
   setTimeout(function() {lck.style.opacity="0"; lck.style.transition =".5s";},1500);
   setTimeout(function() { lck.style.display="none";},2000);
-
 }
+
+function onOff(){
+$("#switchon").css('display','block');
+$(".home").css('display','none');
+}
+
+function turnOff(){
+  $("#switchon").attr('src','imag/switchoff.png');
+  $("#switchon").attr('usemap','none');
+  
+}
+imageMapResize();
