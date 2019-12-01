@@ -7,7 +7,7 @@
 <body>
   <div class="box">
     <img src="imag/homeicon.png" class="home2" alt="homeicon">
-    <img src="gfile/rightafterloop.gif" alt="rightafterloop" style="position:fixed; z-index:2">
+
     <img src="imag/maplocked.png" id="map2" alt="maplocked" style="position:fixed; z-index:14; display:none" usemap="#maplocked">
     <map name="maplocked">
       <area shape="rect" coords="437,324,500,386" onclick="toTVn1()">
@@ -15,7 +15,8 @@
       <area shape="circle" coords="789,439,31" class="bathroom">
       <area shape="rect" coords="425,455,513,491" onclick="toBedn1()">
       <area shape="rect" coords="591,393,679,429" onclick="noAccess()">
-
+    </map>
+<img src="gfile/rightafterloop.gif" alt="rightafterloop" style="position:fixed; z-index:2">
       <map name="switch">
         <area shape="rect" coords="940,280,977,333" onclick="onOff()">
       </map>
@@ -33,6 +34,18 @@
         <area shape="rect" coords="544,294,656,400" onclick="turnOff()">
       </map>
     <img src="imag/switchoff.png" id="switchoff" alt="switchoff">
+    <img src="imag/1black.png" alt="goBlack" style="z-index:20; display:none; opacity:0;">
+
+
+    <div id="caption2" class="cap" style="background-color:black;"> and so the day deepens to night </div>
+
+    <span id="cctvday1" class="cap" style="background-color:black;"> :( sad </span>
+    <span id="cckitchenday1" class="cap" style="background-color:black;"> "dear mom, i think i miss you but these days.."</span>
+    <span id="ccbrday1" class="cap" style="background-color:black;"> huh thats me </span>
+    <span id="ccbrdayone" class="cap" style="background-color:black;"> do i really look like that? </span>
+    <span id="ccbedroomday1" class="cap" style="background-color:black;">if i turn off the lights, maybe i can get to sleep</span>
+    <span id="ccherroomday1" class="cap" style="background-color:black;">ok .lets leave her alone for tonight</span>
+
 
 
 
@@ -44,6 +57,16 @@
 
 
   </div>
+  <script type="text/javascript">
+  window.onload = function(){
+    var c2= document.getElementById("caption2")
+ c2.style.opacity="1"; c2.style.transition ="1s";
+ setTimeout(function() {c2.style.opacity="0"; c2.style.transition ="1s";},1550);
+
+
+};
+
+</script>
 
   <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="index.js"></script>

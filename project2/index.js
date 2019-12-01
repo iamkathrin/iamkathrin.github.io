@@ -69,6 +69,8 @@ function toTVn1(){
   $("#kitchenday1, #brday1, #brday1loop, #bedroom1, #herRoom1").css("display","none");
   $("#map").toggle();
   $("#map2").toggle();
+  $("#cctvday1").css({'opacity':'1','transition':'.5s'});
+  setTimeout(function() {$("#cctvday1").css({'opacity':'0','transition':'.5s'});},3000);
 
 }
 
@@ -79,6 +81,8 @@ function toEatn1(){
   $("#tvday1, #brday1, #brday1loop, #bedroom1, #herRoom1").css("display","none");
   $("#map").toggle();
   $("#map2").toggle();
+  $("#cckitchenday1").css({'opacity':'1','transition':'.5s'});
+  setTimeout(function() {$("#cckitchenday1").css({'opacity':'0','transition':'.5s'});},4000);
 
 }
 
@@ -95,6 +99,9 @@ $('.bathroom').click(function(){
       $("#kitchenday1, #tvday1, #bedroom1, #herRoom1").css("display","none");
       $("#map").toggle();
       $("#map2").toggle();
+      setTimeout(function() {$("#ccbrday1").css({'opacity':'1','transition':'.5s'});},1600);
+      setTimeout(function() {$("#ccbrday1").css({'opacity':'0','transition':'.5s'});},4600);
+
    }else{
       var br1loop= document.getElementById("brday1loop")
       br1loop.style.display="block";
@@ -102,6 +109,8 @@ $('.bathroom').click(function(){
       $("#kitchenday1, #tvday1, #brday1, #bedroom1, #herRoom1").css("display","none");
       $("#map").toggle();
       $("#map2").toggle();
+      $("#ccbrdayone").css({'opacity':'1','transition':'.5s'});
+      setTimeout(function() {$("#ccbrdayone").css({'opacity':'0','transition':'.5s'});},3000);
    }
    ++clicks;
 });
@@ -112,6 +121,8 @@ function toBedn1(){
   $("#tvday1, #brday1, #brday1loop, #kitchenday1, #herRoom1").css("display","none");
   $("#map").toggle();
   $("#map2").toggle();
+  $("#ccbedroomday1").css({'opacity':'1','transition':'.5s'});
+  setTimeout(function() {$("#ccbedroomday1").css({'opacity':'0','transition':'.5s'});},3000);
 }
 function toHern1(){
   $("#herRoom1").css("display","block");
@@ -119,6 +130,8 @@ function toHern1(){
   $("#tvday1, #brday1, #brday1loop, #kitchenday1, #bedroom1").css("display","none");
   $("#map").toggle();
   $("#map2").toggle();
+  setTimeout(function() {$("#ccherroomday1").css({'opacity':'1','transition':'.5s'});},2000);
+  setTimeout(function() {$("#ccherroomday1").css({'opacity':'0','transition':'.5s'});},5000);
 }
 function noAccess(){
   var lck= document.getElementById("locked");
@@ -136,6 +149,6 @@ $(".home").css('display','none');
 function turnOff(){
   $("#switchon").attr('src','imag/switchoff.png');
   $("#switchon").attr('usemap','none');
-  
+
 }
 imageMapResize();

@@ -12,7 +12,7 @@ body{
 }
 li {color:white;}
 li a {cursor: pointer;}
-li a:hover{margin-left:15px; }
+li a:hover{font-style: italic; }
 
 .cap{
   position:fixed;
@@ -35,7 +35,6 @@ li a:hover{margin-left:15px; }
   display: flex;
   justify-content: center;
   margin: auto;
-  border:solid;
   position: relative;
   }
 
@@ -43,14 +42,14 @@ li a:hover{margin-left:15px; }
   position:fixed;
   z-index:15;
   height:auto;
-  width: 65px;
-  top:91vh;
-  left:90vw;
+  width: 60px;
+  top:90vh;
+  left:87vw;
 }
 
 
 .home:hover, .home2:hover {
-  top:90vh;
+  top:89vh;
   cursor: pointer;
 }
 
@@ -89,6 +88,6 @@ li{list-style-type: none;}
   position: fixed;
   height: 200px;
   width: 400px;
-  top:4vh;
-  left:6vw;
+  top:6vh;
+  left:8vw;
 }
