@@ -10,11 +10,11 @@
       <img src="imag/homeicon.png" class="home" alt="homeicon">
       <img src="imag/mapunlocked.png" id="map" alt="mapunlocked" style="position:fixed; z-index:14; display:none;" usemap="#mapunlocked">
         <map name="mapunlocked">
-          <area shape="rect" coords="437,324,500,386" onclick="toTVn1()">
-          <area shape="circle" coords="793,335,30" onclick="toEatn1()">
-          <area shape="circle" coords="789,439,31" class="bathroom">
-          <area shape="rect" coords="425,455,513,491" onclick="toBedn1()">
-          <area shape="rect" coords="591,393,679,429" onclick="toHern1()">
+          <area shape="rect" coords="437,324,500,386" onclick="toccTV()">
+          <area shape="circle" coords="793,335,30" onclick="toccEat()">
+          <area shape="circle" coords="789,439,31" onclick="toccBR()">
+          <area shape="rect" coords="425,455,513,491" onclick="toBedLoop()">
+          <area shape="rect" coords="591,393,679,429" class="dontKnow">
         </map>
       <img src="gfile/openeyes.gif" id="openeyes"alt="openeyes" style= "z-index:3; position:fixed;">
       <img src="gfile/openeyesloop.gif" id="openeyesloop"alt="openeyesloop" style= "z-index:4; display: none;position:fixed;">
@@ -22,14 +22,18 @@
           <area shape="rect" coords="940,280,977,333" onclick="onOff()">
         </map>
 
-      <div class="captions">
-        <p id="bathroomnight1">ill just hold it in</p>
-        <p id="tvnight1">no, not in the mood</p>
-        <p id="kitchennight1">steve's probably still there</p>
-      </div>
+        <div id="caption3" class="cap"style="background-color:black;"> i can hear her crying to herself at night. </div>
 
-      <img class="room" id="dontknow" src="gfile/nightdontknow.gif" alt="dontknow">
-      <img class="room" id="dontknowloop" src="gfile/nightdontknow.gif" alt="dontknowloop">
+        <span class="cap" id="cctvnight1" style="background-color:black;">doubt its even working</span>
+        <span class="cap" id="cceatnight1" style="background-color:black;">no, not hungry</span>
+        <span class="cap" id="ccbrnight1" style="background-color:black;">i can hold it</span>
+        <span class="cap" id="ccdontknow" style="background-color:black;">i dont know what to do.</span>
+        <span class="cap" id="ccdontknow2" style="background-color:black;">i said i dont know what to do.</span>
+        <span class="cap" id="cctobed" style="background-color:black;">cant sleep when you move around</span>
+
+      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:block; opacity:1;">
+      <img class="room" id="dontknow" src="gfile/nightdontknow.gif" alt="dontknow" style="display:none; z-index:9;">
+      <img class="room" id="dontknowloop" src="gfile/night1n2loop.gif" alt="dontknowloop" style="display:none; z-index:8;">
 
       <!-- <div id="caption" class="cap" style="top:8vh;">
       <span style="background-color:black;">  </span>
@@ -44,11 +48,14 @@
     </div>
     <script type="text/javascript">
     window.onload = function(){
+      $("#goDark").css({'opacity':'0','transition':'1s'})
+      setTimeout(function() {$("#goDark").css({'display':'none',});},1100);
       var c3= document.getElementById("caption3")
       var oi= document.getElementById('openeyesloop');
-   setTimeout(function(){oi.style.display= "block";}, 2500);
-   c3.style.opacity="1"; c3.style.transition ="1s";
-   setTimeout(function() {c3.style.opacity="0"; c3.style.transition ="1s";},2500);
+   setTimeout(function(){oi.style.display= "block";}, 1900);
+   c3.style.opacity="1"; c3.style.transition ="2s";
+   setTimeout(function() {c3.style.opacity="0"; c3.style.transition ="1s";},4000);
+
 
 
   };

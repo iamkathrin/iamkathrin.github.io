@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="box">
+    <img src="imag/homeicon.png" class="home" alt="homeicon">
+    <img src="imag/mapunlocked.png" id="map" alt="mapunlocked" style="position:fixed; z-index:14; display:none;" usemap="#mapunlocked">
+      <map name="mapunlocked">
+        <area shape="rect" coords="437,324,500,386" onclick="toccTV()">
+        <area shape="circle" coords="793,335,30" onclick="toccEat()">
+        <area shape="circle" coords="789,439,31" onclick="toccBR()">
+        <area shape="rect" coords="425,455,513,491" onclick="toBedLoop()">
+        <area shape="rect" coords="591,393,679,429" class="dontKnow">
+      </map>
+
+      <map name="switch">
+        <area shape="rect" coords="940,280,977,333" onclick="onOff()">
+      </map>
+      <div id="caption4" class="cap"style="background-color:black;"> rise n shine </div>
+      <img src="gfile/nightmornday1n2.gif" alt="nightmornday1n2" style= "z-index:3; position:fixed;">
+      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:block; opacity:1;">
+
+      <img class="room" id="tvday2" src="gfile/tvdday2.gif" alt="tvday2">
+      <img class="room" id="kitchenday2" src="gfile/kitchendday2" alt="">
+      <img class="room" id="brday2" src="gfile/broccupied.gif" alt="broccupied">
+      <img class="room" id="brday2" src="gfile/broccupiedloop.gif" alt="broccupiedloop">
+      <img class="room" id="bedroom2" src="gfile/" alt="">
+      <img class="room" id="herRoom2" src="gfile/" alt="">
+
+      <img src="imag/switchon.png" id="switchon" alt="switchon" usemap="#off">
+        <map name="off">
+          <area shape="rect" coords="544,294,656,400" onclick="turnOff()">
+        </map>
+      <img src="imag/switchoff.png" id="switchoff" alt="switchoff">
+
+
+    <div class="textTop" style=" position:fixed; font-size: 12px">
+      made in 2001
+    </div>
+
+
+
+  </div>
+
+<script type="text/javascript">
+  window.onload = function(){
+    $("#goDark").css({'opacity':'0','transition':'1s'})
+    setTimeout(function() {$("#goDark").css({'display':'none',});},1100);};
+    var c2= document.getElementById("caption4")
+ c2.style.opacity="1"; c2.style.transition ="1.5s";
+ setTimeout(function() {c2.style.opacity="0"; c2.style.transition ="1s";},2500);
+</script>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="imageMapResizer.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('map').imageMapResize();
+});
+</script>
+</body>
+</html>

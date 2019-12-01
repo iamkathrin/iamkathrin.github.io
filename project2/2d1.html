@@ -34,17 +34,17 @@
         <area shape="rect" coords="544,294,656,400" onclick="turnOff()">
       </map>
     <img src="imag/switchoff.png" id="switchoff" alt="switchoff">
-    <img src="imag/1black.png" alt="goBlack" style="z-index:20; display:none; opacity:0;">
+    <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:none; opacity:0;">
 
 
-    <div id="caption2" class="cap" style="background-color:black;"> and so the day deepens to night </div>
+    <div id="caption2" class="cap" style="background-color:black;">the day deepens to night </div>
 
-    <span id="cctvday1" class="cap" style="background-color:black;"> :( sad </span>
-    <span id="cckitchenday1" class="cap" style="background-color:black;"> "dear mom, i think i miss you but these days.."</span>
-    <span id="ccbrday1" class="cap" style="background-color:black;"> huh thats me </span>
-    <span id="ccbrdayone" class="cap" style="background-color:black;"> do i really look like that? </span>
+    <span id="cctvday1" class="cap" style="background-color:black;"> :0 aw </span>
+    <span id="cckitchenday1" class="cap" style="background-color:black;"> "..and then the sky turned red and i was.."</span>
+    <span id="ccbrday1" class="cap" style="background-color:black;"> o dear </span>
+    <span id="ccbrdayone" class="cap" style="background-color:black;"> someone should clean this mirror </span>
     <span id="ccbedroomday1" class="cap" style="background-color:black;">if i turn off the lights, maybe i can get to sleep</span>
-    <span id="ccherroomday1" class="cap" style="background-color:black;">ok .lets leave her alone for tonight</span>
+
 
 
 
@@ -59,12 +59,23 @@
   </div>
   <script type="text/javascript">
   window.onload = function(){
+    $("#goDark").css({'opacity':'0','transition':'1s'})
+    setTimeout(function() {$("#goDark").css({'display':'none',});},1100);};
+
     var c2= document.getElementById("caption2")
- c2.style.opacity="1"; c2.style.transition ="1s";
- setTimeout(function() {c2.style.opacity="0"; c2.style.transition ="1s";},1550);
+ c2.style.opacity="1"; c2.style.transition ="1.5s";
+ setTimeout(function() {c2.style.opacity="0"; c2.style.transition ="1s";},3000);
 
+    function turnOff(){
+      $("#switchon").attr('src','imag/switchoff.png');
+      $("#switchon").attr('usemap','none');
+      $("#goDark").css({'display':'block',})
+      setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'3s'});},100);
 
-};
+      setTimeout(function () {
+       window.location.href = "2d2.html";
+    }, 3500);
+    }
 
 </script>
 
