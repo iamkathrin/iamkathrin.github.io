@@ -11,7 +11,7 @@ body{
   min-height: 1125px;
 }
 li {color:white;}
-li a {cursor: pointer;}
+li a {cursor: pointer;  background-color: #0c171c;}
 li a:hover{font-style: italic; }
 
 .cap{
@@ -80,7 +80,7 @@ img{
 
 li{list-style-type: none;}
 
-#choiceBox{
+#choiceBox, #choiceBox2{
   z-index:10;
   display: none;
   opacity: 0;

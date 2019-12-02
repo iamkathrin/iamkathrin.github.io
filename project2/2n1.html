@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="box">
+    <img src="imag/homeicon.png" class="home2" alt="homeicon">
+    <img src="gfile/rightafterloop.gif" alt="rightafterloop" style="position:fixed; z-index:2">
+    <img src="imag/maplocked.png" id="map2" alt="maplocked" style="position:fixed; z-index:14; display:none" usemap="#maplocked">
+    <map name="maplocked">
+      <area shape="rect" coords="437,324,500,386" class="gbbshow">
+      <area shape="circle" coords="793,335,30" onclick="toEatd2()">
+      <area shape="circle" coords="789,439,31" class="occupied">
+      <area shape="rect" coords="425,455,513,491" onclick="toBedd2()">
+      <area shape="rect" coords="591,393,679,429" onclick="noAccess()">
+    </map>
+      <map name="switch">
+        <area shape="rect" coords="940,280,977,333" onclick="onOff()">
+      </map>
+
+      <div id="caption4" class="cap"style="background-color:black;"> thought i could hear someone crying last night but i dunno </div>
+      <img src="gfile/nightmornday1n2.gif" alt="nightmornday1n2" style= "z-index:3; position:fixed;" usemap="#switch">
+      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:block; opacity:1;">
+
+
+<img class="room" id="tvday2" src="gfile/tvdday2.gif" alt="tvday2">
+<img class="room" id="kitchendday2" src="gfile/kitchendday2.gif" alt="kitchendday2">
+<img class="room" id="brday2" src="gfile/broccupied.gif" alt="broccupied">
+<img class="room" id="brday2" src="gfile/broccupiedloop.gif" alt="broccupiedloop">
+<img class="room" id="bedroom2" src="gfile/bedroomclickstay2.gif" alt="bedroomclickstay2" usemap="#switch">
+<img class="room" id="locked" src="imag/locked.png" alt="locked">
+
+
+
+
+    <div class="textTop" style=" position:fixed; font-size: 12px">
+      made in 2001
+    </div>
+
+
+
+  </div>
+
+  <script type="text/javascript">
+    window.onload = function(){
+      $("#goDark").css({'opacity':'0','transition':'1s'})
+      setTimeout(function() {$("#goDark").css({'display':'none',});},1100);};
+      var c2= document.getElementById("caption4")
+   c2.style.opacity="1"; c2.style.transition ="1.5s";
+   setTimeout(function() {c2.style.opacity="0"; c2.style.transition ="1s";},2500);
+  </script>
+
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="imageMapResizer.min.js"></script>
+</body>
+</html>
