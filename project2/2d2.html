@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="box">
+    <img src="imag/homeicon.png" class="home2" alt="homeicon">
+    <img src="gfile/rightafterloop.gif" alt="rightafterloop" style="position:fixed; z-index:2">
+    <img src="imag/maplocked.png" id="map2" alt="maplocked" style="position:fixed; z-index:14; display:none" usemap="#maplocked">
+    <map name="maplocked">
+      <area shape="rect" coords="437,324,500,386" onclick="toTVn1()">
+      <area shape="circle" coords="793,335,30" onclick="toEatn1()">
+      <area shape="circle" coords="789,439,31" class="bathroom">
+      <area shape="rect" coords="425,455,513,491" onclick="toBedn1()">
+      <area shape="rect" coords="591,393,679,429" onclick="noAccess()">
+
+      <map name="switch">
+        <area shape="rect" coords="940,280,977,333" onclick="onOff()">
+      </map>
+
+
+
+    <img class="room" id="locked" src="imag/locked.png" alt="locked">
+
+
+
+
+    <div class="textTop" style=" position:fixed; font-size: 12px">
+      made in 2001
+    </div>
+
+
+
+  </div>
+
+
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="imageMapResizer.min.js"></script>
+</body>
+</html>
