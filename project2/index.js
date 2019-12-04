@@ -228,7 +228,7 @@ var clicks =0;
        $('#tvday2loop').css({'display':'block', 'zIndex':'5'});
        setTimeout(function(){$('#tvday2').css({'display':'block', 'zIndex':'6'});},1000);
        setTimeout(function(){$('#tvday2').css('display','none');},1980);
-       $("#bedroom2, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk").css("display","none");
+       $("#bedroom2, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk, #smell").css("display","none");
 
 
        $("#map").toggle();
@@ -237,7 +237,7 @@ var clicks =0;
 
      }else{
        $('#tvday2loop').css({'display':'block', 'zIndex':'5'});
-       $("#bedroom2, #brday2, #brday2loop, #trunk,#kitchendday2, #herRoom2").css("display","none");
+       $("#bedroom2, #brday2, #brday2loop, #trunk,#kitchendday2, #herRoom2, #trunk, #smell").css("display","none");
        $("#map").toggle();
        setTimeout(function() {$("#cctvdaytwo").css({'opacity':'1','transition':'.5s'});},600);
        setTimeout(function() {$("#cctvdaytwo").css({'opacity':'0','transition':'.5s'});},4000);
@@ -248,7 +248,7 @@ var clicks =0;
   function toEatd2(){
     $("#kitchendday2").css("display","block");
     $("#kitchendday2").css("zIndex","5");
-    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #bedroom2, #herRoom2,#trunk").css("display","none");
+    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #bedroom2, #herRoom2,#trunk,#smell").css("display","none");
     $("#map").toggle();
     $("#map2").toggle();
     setTimeout(function() {$("#cckitchend2").css({'opacity':'1','transition':'.5s'});},1000);
@@ -263,7 +263,7 @@ var clicks =0;
         $("#brday2loop").css("zIndex","5");
         setTimeout(function(){$('#brday2').css('display','none');},1000);
         setTimeout(function(){$('#brday2loop').css('display','block');},1000);
-        $("#tvday2,#tvday2loop,#bedroom2, #kitchendday2, #herRoom2,#trunk").css("display","none");
+        $("#tvday2,#tvday2loop,#bedroom2, #kitchendday2, #herRoom2,#trunk, #smell").css("display","none");
         $("#map").toggle();
          setTimeout(function() {$("#ccbrday2").css({'opacity':'1','transition':'.5s'});},1000);
          setTimeout(function() {$("#ccbrday2").css({'opacity':'0','transition':'.5s'});},3000);
@@ -271,7 +271,7 @@ var clicks =0;
       }else{
         $('#brday2loop').css('display','block');
         $("#brday2loop").css("zIndex","5");
-        $("#tvday2,#tvday2loop,#bedroom2, #kitchendday2, #herRoom2,#trunk").css("display","none");
+        $("#tvday2,#tvday2loop,#bedroom2, #kitchendday2, #herRoom2,#trunk, #smell").css("display","none");
         $("#map").toggle();
               }
       ++clickz;
@@ -280,7 +280,7 @@ var clicks =0;
   function toBedd2(){
     $("#bedroom2").css("display","block");
     $("#bedroom2").css("zIndex","5");
-    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk").css("display","none");
+    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk, #smell").css("display","none");
     $("#map").toggle();
     $("#map2").toggle();
     $("#ccbedroomday2").css({'opacity':'1','transition':'.5s'});
@@ -290,7 +290,7 @@ var clicks =0;
   function toHerd2(){
     $("#herRoom2").css("display","block");
     $("#herRoom2").css("zIndex","5");
-    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #bedroom2,#trunk").css("display","none");
+    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #bedroom2,#trunk, #smell").css("display","none");
     $("#map").toggle();
     $("#map2").toggle();
     setTimeout(function() {$("#ccherroomday2").css({'opacity':'1','transition':'.5s'});},200);
@@ -313,15 +313,26 @@ var clicks =0;
     setTimeout(function() {f6.style.opacity="1"; f6.style.transition = "1.5s";},2000);
 
     }
+      var clickzzz=0
     function smell(){
+      if (clickzzz==0){
       $('#smell').css({'zIndex':'10','display':'block'});
       setTimeout(function() {$("#smell").attr('src','gfile/smellloop.gif');},2500);
-      $('#trunk').css('display','none');
-      $('#choiceBox2, #caption5').css({'opacity':"0", 'transition':'.5s'});
+      $('#trunk, #caption5').css('display','none');
+      $('#choiceBox2').css({'opacity':"0", 'transition':'.5s'});
+      setTimeout(function() {$("#caption6").css({'opacity':'1','transition':'.5s'});},2000);
+      setTimeout(function() {$("#caption6").css({'opacity':'0','transition':'.5s'});},4600);
+        }else{
+          $('#smell').css({'zIndex':'10','display':'block'});
+          setTimeout(function() {$("#smell").attr('src','gfile/smellloop.gif');},2500);
+          $('#trunk, #caption5').css('display','none');
+          $('#choiceBox2').css({'opacity':"0", 'transition':'.5s'});
+          setTimeout(function() {$("#captionsix").css({'opacity':'1','transition':'.5s'});},0);
+          setTimeout(function() {$("#captionsix").css({'opacity':'0','transition':'.5s'});},2600);
+        }
+++clickzzz;
 
-
-
-  }
+};
 
 // night 2
 function toTVn2(){
@@ -397,6 +408,8 @@ function leaveRoom(){
   var g6= document.getElementById('choiceBox3');
   // g6.style.display="block";
   setTimeout(function() {g6.style.opacity="0"; g6.style.transition = ".5s";},0);
+  setTimeout(function() {$("#badreaction").css({'opacity':'1','transition':'.5s'});},600);
+  setTimeout(function() {$("#badreaction").css({'opacity':'0','transition':'.5s'});},2600);
 
 
 
@@ -405,8 +418,10 @@ function leaveRoom(){
 
 function goToEnding1() {
   window.location.href = "1.html"
+}
 
-
+function redo(){
+  window.location.href = "index.html"
 }
 
 

@@ -46,13 +46,14 @@ li a:hover{font-style: italic; }
   width: 60px;
   top:89vh;
   left:88vw;
+  transition: .7s;
 }
 
 
 .home:hover, .home2:hover {
   top:88vh;
   cursor: pointer;
-  user-select: none;
+  /* user-select: none; */
 }
 
 #switchon, #switchoff{
