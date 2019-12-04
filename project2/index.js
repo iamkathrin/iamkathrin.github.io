@@ -191,7 +191,7 @@ function toBedLoop(){
 
   function timerIncrement() {
       idleTime = idleTime + 1;
-      if (idleTime > 7) { // 20 minutes
+      if (idleTime > 7) {
         $("#goDark").css({'display':'block',})
           setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'1s'});},10);
          setTimeout(function() {
@@ -372,14 +372,52 @@ function toBRn2(){
   setTimeout(function() {$("#ccbrnight2").css({'opacity':'0','transition':'.5s'});},2600);
 }
 
+var cliks=0
 function toBedn2(){
+  if (cliks==0){
+
+    $('#bedn2').css({'display':'block', 'zIndex':'5'});
+    $("#toTVn2, #kitchennight2, #brnight2,#herroomn2, #n2youloop, #n2you").css("display","none");
+      $("#map").toggle();
+    setTimeout(function() {$("#ccbedn2").css({'opacity':'1','transition':'.5s'});},600);
+    setTimeout(function() {$("#ccbedn2").css({'opacity':'0','transition':'.5s'});},2600);
+
+    }else{
   $('#bedn2').css({'display':'block', 'zIndex':'5'});
   $("#toTVn2, #kitchennight2, #brnight2,#herroomn2, #n2youloop, #n2you").css("display","none");
     $("#map").toggle();
-  setTimeout(function() {$("#ccbedn2").css({'opacity':'1','transition':'.5s'});},600);
-  setTimeout(function() {$("#ccbedn2").css({'opacity':'0','transition':'.5s'});},2600);
+  setTimeout(function() {$("#chooseNo").css({'opacity':'1','transition':'.5s'});},600);
+  setTimeout(function() {$("#chooseNo").css({'opacity':'0','transition':'.5s'});},2600);
+
+
+    var idleTime = 0;
+    $(document).ready(function () {
+        //Increment the idle time counter every minute.
+        var idleInterval = setInterval(timerIncrement, 1000); // 1 minute
+
+        //Zero the idle timer on mouse movement.
+        $(this).mousemove(function (e) {
+            idleTime = 0;
+        });
+        $(this).keypress(function (e) {
+            idleTime = 0;
+        });
+    });
+
+    function timerIncrement() {
+        idleTime = idleTime + 1;
+        if (idleTime > 7) {
+          $("#goDark").css({'display':'block',})
+            setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'1s'});},10);
+           setTimeout(function() {
+             window.location.href ="2d2.html";
+           },1500)
+        }}
 
 }
+++cliks;
+};
+
 
 function toHernite2(){
   $('#herroomn2').css({'display':'block', 'zIndex':'5'});
@@ -417,7 +455,11 @@ function leaveRoom(){
 // endings
 
 function goToEnding1() {
-  window.location.href = "1.html"
+  $("#goGold").css({'display':'block',})
+    setTimeout(function() {$("#goGold").css({'opacity':'1','transition':'1.5s'});},10);
+  setTimeout(function() {
+    window.location.href ="1.html";
+  },1500)
 }
 
 function redo(){
