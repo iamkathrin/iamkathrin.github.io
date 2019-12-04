@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <body>
+    <div class="box">
+      <img src="imag/homeicon.png" class="home" alt="homeicon">
+      <img src="imag/mapunlocked.png" id="map" alt="mapunlocked" style="position:fixed; z-index:14; display:none;" usemap="#mapunlocked">
+        <map name="mapunlocked">
+          <area shape="rect" coords="437,324,500,386" onclick="toTVn2()">
+          <area shape="circle" coords="793,335,30" onclick="toEatnite2()">
+          <area shape="circle" coords="789,439,31" onclick="toBRn2()">
+          <area shape="rect" coords="425,455,513,491" onclick="toBedn2()">
+          <area shape="rect" coords="591,393,679,429" onclick="toHernite2()">
+        </map>
+      <img src="gfile/openeyes.gif" id="openeyes"alt="openeyes" style= "z-index:3; position:fixed;">
+      <img src="gfile/openeyesloop.gif" id="openeyesloop"alt="openeyesloop" style= "z-index:4; display: none;position:fixed;">
+        <map name="switch">
+          <area shape="rect" coords="940,280,977,333" onclick="onOff()">
+        </map>
+
+        <div id="caption3" class="cap"style="background-color:black;"> there it is again. shes crying. </div>
+
+        <img class="room" id="tvnight2" src="gfile/tvnight2.gif" alt="tvnight2">
+        <img class="room" id="kitchennight2"src="gfile/kitchennight2.gif" alt="kitchennight2">
+        <img class="room" id="n2you"src="gfile/day2you.gif" alt="day2you">
+        <img class="room" id="n2youloop"src="gfile/day2youloop.gif" alt="day2youloop">
+        <img class="room" id="brnight2"src="gfile/brday2loop.gif" alt="kitchennight2">
+        <img class="room" id="bedn2"src="gfile/night1n2loop.gif" alt="night1n2loop">
+        <img class="room" id="herroomn2" src="gfile/joinherloopfar.gif" alt="joinherloopfar" usemap="#joinHer">
+          <map name="joinHer">
+            <area shape="poly" coords="427,669,480,654,430,628,434,568,471,506,537,426,589,
+            426,614,463,561,544,563,579,623,554,638,567,597,606,620,665,615,692,428,686" onclick="zoomJoinher()">
+          </map>
+        <img class="room" id="joinherclose"src="gfile/joinher.gif" alt="joinher">
+        <img class="room" id="joinherloop"src="gfile/joinherloop.gif" alt="joinherloop">
+
+
+        <span class="cap" id="cctvnight2" style="background-color:black;"><i>&#9834; love my way, its a new road &#9834;</i></span>
+        <span class="cap" id="cceatnight2" style="background-color:black;">guess we were all hungry</span>
+        <span class="cap" id="cceatnighttwo" style="background-color:black;">/munch munch munch/</span>
+        <span class="cap" id="ccbrnight2" style="background-color:black;"> ah, to calm the nerves</span>
+        <span class="cap" id="ccbedn2" style="background-color:black;">what to do? what to do?</span>
+        <span class="cap" id="ccok" style="background-color:black;">hey, are  you ok?</span>
+        <span class="cap" id="ccresponse" style="background-color:black;"><i>im just watering my flowers.</i></span>
+
+      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:block; opacity:1;">
+
+
+      <!-- <div id="caption" class="cap" style="top:8vh;">
+      <span style="background-color:black;">  </span>
+      </div> -->
+
+    <div class="textTop" style=" position:fixed; font-size: 12px">
+        made in 2001
+      </div>
+      <nav id="choiceBox3">
+        <ul>
+          <li onclick="goToEnding1()"><a> ( join her )</a></li>
+          <br>
+          <li onclick="leaveRoom()"><a> ( leave )</a></li>
+        </ul
+      </nav>
+
+
+    </div>
+    <script type="text/javascript">
+    window.onload = function(){
+      $("#goDark").css({'opacity':'0','transition':'1s'})
+      setTimeout(function() {$("#goDark").css({'display':'none',});},1100);
+      var c3= document.getElementById("caption3")
+      var oi= document.getElementById('openeyesloop');
+   setTimeout(function(){oi.style.display= "block";}, 1900);
+   c3.style.opacity="1"; c3.style.transition ="2s";
+   setTimeout(function() {c3.style.opacity="0"; c3.style.transition ="1s";},4000);
+  };
+
+
+  </script>
+
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="imageMapResizer.min.js"></script>
+</body>
+</html>
