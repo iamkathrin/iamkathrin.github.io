@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <body>
+    <div class="box">
+
+      <img src="gfile/silence.gif" id="silence"alt="silence" style= "z-index:3; position:fixed;">
+        <div id="caption8" class="cap"style="background-color:black;"> not a sound to be heard tonight </div>
+<img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:block; opacity:1;">
+
+
+      <!-- <div id="caption" class="cap" style="top:8vh;">
+      <span style="background-color:black;">  </span>
+      </div> -->
+
+    <div class="textTop" style=" position:fixed; font-size: 12px">
+        made in 2001
+      </div>
+
+
+
+    </div>
+    <script type="text/javascript">
+    window.onload = function(){
+      $("#goDark").css({'opacity':'0','transition':'1s'})
+      setTimeout(function() {$("#goDark").css({'display':'none',});},1100);
+      var c8= document.getElementById("caption8")
+     c8.style.opacity="1"; c8.style.transition ="2s";
+   setTimeout(function() {c8.style.opacity="0"; c8.style.transition ="1s";},4000);
+  };
+  setTimeout(function() {$("#goDark").css({'display':'block',});},3900);
+  setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'1s'});},4000);
+
+  setTimeout(function() {
+    window.location.href ="3d3.html";
+  },5000);
+
+
+  </script>
+
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="imageMapResizer.min.js"></script>
+</body>
+</html>

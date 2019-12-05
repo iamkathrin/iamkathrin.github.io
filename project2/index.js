@@ -206,6 +206,7 @@ function toBedLoop(){
        setTimeout(function(){$('#dontknow').css('display','none');},4500);
        setTimeout(function(){$('#dontknowloop').css('display','block');},4500);
        $("#map").toggle();
+       $("#map2").toggle();
         setTimeout(function() {$("#ccdontknow").css({'opacity':'1','transition':'.5s'});},1600);
         setTimeout(function() {$("#ccdontknow").css({'opacity':'0','transition':'.5s'});},4600);
 
@@ -213,6 +214,7 @@ function toBedLoop(){
        $('#dontknowloop').css('display','block');
        $('#dontknow').css('display','none');
        $("#map").toggle();
+       $("#map2").toggle();
        setTimeout(function() {$("#ccdontknow2").css({'opacity':'1','transition':'.5s'});},100);
        setTimeout(function() {$("#ccdontknow2").css({'opacity':'0','transition':'.5s'});},3000);
 
@@ -228,17 +230,17 @@ var clicks =0;
        $('#tvday2loop').css({'display':'block', 'zIndex':'5'});
        setTimeout(function(){$('#tvday2').css({'display':'block', 'zIndex':'6'});},1000);
        setTimeout(function(){$('#tvday2').css('display','none');},1980);
-       $("#bedroom2, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk, #smell").css("display","none");
-
-
+       $("#bedroom2, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk, #smell, #emptyT, #takeThemLoop").css("display","none");
        $("#map").toggle();
-        setTimeout(function() {$("#cctvday2").css({'opacity':'1','transition':'.5s'});},600);
+       $("#map2").toggle();
+       setTimeout(function() {$("#cctvday2").css({'opacity':'1','transition':'.5s'});},600);
         setTimeout(function() {$("#cctvday2").css({'opacity':'0','transition':'.5s'});},3600);
 
      }else{
        $('#tvday2loop').css({'display':'block', 'zIndex':'5'});
-       $("#bedroom2, #brday2, #brday2loop, #trunk,#kitchendday2, #herRoom2, #trunk, #smell").css("display","none");
+       $("#bedroom2, #brday2, #brday2loop, #trunk,#kitchendday2, #herRoom2, #trunk, #smell, #emptyT, #takeThemLoop").css("display","none");
        $("#map").toggle();
+       $("#map2").toggle();
        setTimeout(function() {$("#cctvdaytwo").css({'opacity':'1','transition':'.5s'});},600);
        setTimeout(function() {$("#cctvdaytwo").css({'opacity':'0','transition':'.5s'});},4000);
 
@@ -248,7 +250,7 @@ var clicks =0;
   function toEatd2(){
     $("#kitchendday2").css("display","block");
     $("#kitchendday2").css("zIndex","5");
-    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #bedroom2, #herRoom2,#trunk,#smell").css("display","none");
+    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #bedroom2, #herRoom2,#trunk,#smell, #emptyT, #takeThemLoop").css("display","none");
     $("#map").toggle();
     $("#map2").toggle();
     setTimeout(function() {$("#cckitchend2").css({'opacity':'1','transition':'.5s'});},1000);
@@ -263,16 +265,18 @@ var clicks =0;
         $("#brday2loop").css("zIndex","5");
         setTimeout(function(){$('#brday2').css('display','none');},1000);
         setTimeout(function(){$('#brday2loop').css('display','block');},1000);
-        $("#tvday2,#tvday2loop,#bedroom2, #kitchendday2, #herRoom2,#trunk, #smell").css("display","none");
+        $("#tvday2,#tvday2loop,#bedroom2, #kitchendday2, #herRoom2,#trunk, #smell,#emptyT , #takeThemLoop").css("display","none");
         $("#map").toggle();
+        $("#map2").toggle();
          setTimeout(function() {$("#ccbrday2").css({'opacity':'1','transition':'.5s'});},1000);
          setTimeout(function() {$("#ccbrday2").css({'opacity':'0','transition':'.5s'});},3000);
 
       }else{
         $('#brday2loop').css('display','block');
         $("#brday2loop").css("zIndex","5");
-        $("#tvday2,#tvday2loop,#bedroom2, #kitchendday2, #herRoom2,#trunk, #smell").css("display","none");
+        $("#tvday2,#tvday2loop,#bedroom2, #kitchendday2, #herRoom2,#trunk, #smell, #emptyT, #takeThemLoop").css("display","none");
         $("#map").toggle();
+        $("#map2").toggle();
               }
       ++clickz;
    };
@@ -280,17 +284,26 @@ var clicks =0;
   function toBedd2(){
     $("#bedroom2").css("display","block");
     $("#bedroom2").css("zIndex","5");
-    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk, #smell").css("display","none");
+    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk, #smell, #emptyT").css("display","none");
     $("#map").toggle();
     $("#map2").toggle();
     $("#ccbedroomday2").css({'opacity':'1','transition':'.5s'});
     setTimeout(function() {$("#ccbedroomday2").css({'opacity':'0','transition':'.5s'});},3000);
   }
+  function toBedd3(){
+    $("#takeThemLoop").css("display","block");
+    $("#takeThemLoop").css("zIndex","5");
+    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk, #smell,#emptyT").css("display","none");
+    $("#map").toggle();
+    $("#map2").toggle();
+    setTimeout(function() {$("#ccbed3day2").css({'opacity':'1','transition':'.5s'});},200);
+    setTimeout(function() {$("#ccbed3day2").css({'opacity':'0','transition':'.5s'});},2200);
+  }
 
   function toHerd2(){
     $("#herRoom2").css("display","block");
     $("#herRoom2").css("zIndex","5");
-    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #bedroom2,#trunk, #smell").css("display","none");
+    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #bedroom2,#trunk, #smell, #emptyT, #takeThemLoop").css("display","none");
     $("#map").toggle();
     $("#map2").toggle();
     setTimeout(function() {$("#ccherroomday2").css({'opacity':'1','transition':'.5s'});},200);
@@ -303,6 +316,15 @@ var clicks =0;
         setTimeout(function() {$("#cat").css({'opacity':'0','transition':'.5s'});},1200);
         setTimeout(function() {$("#cat").css('display','none');},1500);
   };
+function emptyT(){
+  $("#emptyT").css("display","block");
+  $("#emptyT").css("zIndex","5");
+  $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #bedroom2,#trunk, #smell, #takeThemLoop").css("display","none");
+  $("#map").toggle();
+  $("#map2").toggle();
+  setTimeout(function() {$("#ccherroomday2").css({'opacity':'1','transition':'.5s'});},200);
+  setTimeout(function() {$("#ccherroomday2").css({'opacity':'0','transition':'.5s'});},2000);
+}
 
   function zoomFlowers(){
     $('#trunk').css('display','block');
@@ -333,6 +355,10 @@ var clicks =0;
 ++clickzzz;
 
 };
+
+function takeThem(){
+  window.location.href ="3d2.html";
+}
 
 // night 2
 function toTVn2(){
@@ -410,7 +436,7 @@ function toBedn2(){
           $("#goDark").css({'display':'block',})
             setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'1s'});},10);
            setTimeout(function() {
-             window.location.href ="2d2.html";
+             window.location.href ="3n2.html";
            },1500)
         }}
 
@@ -463,7 +489,11 @@ function goToEnding1() {
 }
 
 function redo(){
-  window.location.href = "index.html"
+  $("#goDark").css({'display':'block',})
+    setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'.8s'});},10);
+  setTimeout(function() {
+    window.location.href ="index.html";
+  },1500)
 }
 
 

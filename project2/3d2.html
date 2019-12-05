@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <body>
+    <div class="box">
+      <img src="imag/homeicon.png" class="home" alt="homeicon">
+      <img src="imag/mapunlocked.png" id="map" alt="mapunlocked" style="position:fixed; z-index:14; display:none;" usemap="#mapunlocked">
+      <map name="mapunlocked">
+        <area shape="rect" coords="437,324,500,386" class="gbbshow">
+        <area shape="circle" coords="793,335,30" onclick="toEatd2()">
+        <area shape="circle" coords="789,439,31" onclick="toBR2()">
+        <area shape="rect" coords="425,455,513,491" onclick="toBedd3()">
+        <area shape="rect" coords="591,393,679,429" onclick="emptyT()">
+      </map>
+
+        <map name="switch">
+          <area shape="rect" coords="940,280,977,333" onclick="onOff()">
+        </map>
+
+        <div id="caption3" class="cap"style="background-color:black;">  </div>
+
+
+        <img class="room" id="takeThem" src="gfile/takethem.gif" alt="takethem">
+        <img class="room" id="takeThemLoop" src="gfile/takethemloop.gif" alt="takethemloop" usemap="#switch">
+        <img class="room" id="tvday2loop" src="gfile/tvdday2loop.gif" alt="tvday2loop">
+        <img class="room" id="kitchendday2" src="gfile/kitchendday2.gif" alt="kitchendday2">
+        <img class="room" id="brday2" src="gfile/broccupied.gif" alt="broccupied">
+        <img class="room" id="brday2loop" src="gfile/broccupiedloop.gif" alt="broccupiedloop">
+        <img class="room" id="emptyT" src="gfile/joinherempty.gif" alt="emptyT" usemap="#cat">
+        <img src="gfile/cat.gif" id="cat" alt="cat" style="position:fixed;display:none;opacity:0;z-index:6;">
+
+          <map name="cat">
+            <area shape="circle" coords="815,425,28" onclick="cat()" >
+          </map>
+
+
+        <img src="imag/switchon.png" id="switchon" alt="switchon" usemap="#off">
+          <map name="off">
+            <area shape="rect" coords="544,294,656,400" onclick="turnOff()">
+          </map>
+        <img src="imag/switchoff.png" id="switchoff" alt="switchoff">
+
+
+        <span class="cap" id="cctvday2" style="background-color:black;">hey, didn't know jon was on this show</span>
+        <span class="cap" id="cctvdaytwo" style="background-color:black;">"its very good jon. its just, the sponginess is not quite there yet.."</span>
+        <span class="cap" id="cckitchend2" style="background-color:black;">ok. but i dont know how to cook</span>
+        <span class="cap" id="ccbrday2" style="background-color:black;">fuck shes been in there for hours</span>
+        <span class="cap" id="ccbed3day2" style="background-color:black;">how pretty !</span>
+        <span class="cap" id="ccherroomday2" style="background-color:black;">hmm</span>
+
+
+
+
+      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:none; opacity:0;">
+
+
+      <!-- <div id="caption" class="cap" style="top:8vh;">
+      <span style="background-color:black;">  </span>
+      </div> -->
+
+    <div class="textTop" style=" position:fixed; font-size: 12px">
+        made in 2001
+      </div>
+
+
+    </div>
+    <script type="text/javascript">
+    window.onload = function(){
+    $('#takeThem').css({'display':'block','zIndex':'7'})
+    setTimeout(function() {$("#takeThem").css('display','none');},1000);
+    $('#takeThemLoop').css({'display':'block','zIndex':'5'})
+    setTimeout(function() {$("#ccbed3day2").css({'opacity':'1','transition':'.5s'});},200);
+    setTimeout(function() {$("#ccbed3day2").css({'opacity':'0','transition':'.5s'});},2000);
+}
+
+
+  </script>
+
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="imageMapResizer.min.js"></script>
+<script type="text/javascript">
+function turnOff(){
+  $("#switchon").attr('src','imag/switchoff.png');
+  $("#switchon").attr('usemap','none');
+  $("#goDark").css({'display':'block',})
+  setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'3s'});},100);
+
+  setTimeout(function () {
+   window.location.href = "3n2.html";
+}, 3500);
+}
+
+$(document).ready(function() {
+  $('map').imageMapResize();
+});
+</script>
+</body>
+</html>
