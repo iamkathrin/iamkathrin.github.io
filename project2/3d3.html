@@ -9,25 +9,36 @@
     <img src="imag/homeicon.png" class="home" alt="homeicon">
     <img src="imag/mapunlocked.png" id="map" alt="mapunlocked" style="position:fixed; z-index:14; display:none;" usemap="#mapunlocked">
       <map name="mapunlocked">
-        <area shape="rect" coords="437,324,500,386" class="">
-        <area shape="circle" coords="793,335,30" onclick="">
-        <area shape="circle" coords="789,439,31" onclick="">
-        <area shape="rect" coords="425,455,513,491" onclick="">
-        <area shape="rect" coords="591,393,679,429" onclick="">
+        <area shape="rect" coords="437,324,500,386" onclick="ending3()">
+        <area shape="circle" coords="793,335,30" onclick="toEatd3()">
+        <area shape="circle" coords="789,439,31" onclick="toBRd3()">
+        <area shape="rect" coords="425,455,513,491" onclick="toBed3()">
+        <area shape="rect" coords="591,393,679,429" onclick="notThere()">
       </map>
 
       <map name="switch">
         <area shape="rect" coords="940,280,977,333" onclick="onOff()">
       </map>
-      <div id="caption9" class="cap"style="background-color:black;">another day is upon us. unfortunately </div>
+      <div id="caption9" class="cap"style="background-color:black;">another day is upon us </div>
       <img id="dead"src="gfile/wakeupdead.gif" style="z-index:3; position:fixed;" alt="dead">
 
-      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:block; opacity:1;">
+      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:23; display:block; opacity:1;">
       <img class="room" id="endingloss" src="gfile/endingloss.gif" alt="endingloss">
-      <img class="room" id="endinglossstay" src="gfile/endinglossstay.gif" alt="endinglossstay">
+      <img class="room" id="endinglossstay" src="gfile/endinglossstay2.gif" alt="endinglossstay">
       <img class="room" id="kitchenday3" src="gfile/kitchenday3.gif" alt="kitchenday3">
       <img class="room" id="brday3" src="gfile/brday3loop.gif" alt="brday3">
       <img class="room" id="emptyR" src="imag/empty.png" alt="emptyR">
+      <img style=" display: none; opacity:0; width:80px; height:auto; left:87vw; z-index:22;"
+      class="home" src="imag/gohome.png" alt="gohome" id="redo" onclick="redo()">
+
+
+      <span class="cap" id="ccmovefeet" style="background-color:black;"><i>watch your feet</i></span>
+      <span class="cap" id="ccnews" style="background-color:black;"><i>"...residents say she simply disappeared, leaving no trace behind. <br>
+        Strangely, all flora around the lodge have withered away..."</i></span>
+      <span class="cap" id="cckitchend3" style="background-color:black;">something feels off</span>
+      <span class="cap" id="ccbrday3" style="background-color:black;"> so coldd</span>
+      <span class="cap" id="ccbed3day3" style="background-color:black;">should i lay here forever</span>
+      <span class="cap" id="ccnotThere" style="background-color:black;">she's not there anymore</span>
 
 
       <div class="textTop" style=" position:fixed; font-size: 12px">
@@ -43,7 +54,7 @@
     setTimeout(function() {$("#goDark").css({'display':'none',});},1100);};
     var c9= document.getElementById("caption9")
  c9.style.opacity="1"; c9.style.transition ="1.5s";
- setTimeout(function() {c9.style.opacity="0"; c9.style.transition ="1s";},2500);
+ setTimeout(function() {c9.style.opacity="0"; c9.style.transition ="1s";},1500);
 
  function turnOff(){
    $("#switchon").attr('src','imag/switchoff.png');

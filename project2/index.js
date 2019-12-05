@@ -475,9 +475,54 @@ function leaveRoom(){
   setTimeout(function() {$("#badreaction").css({'opacity':'1','transition':'.5s'});},600);
   setTimeout(function() {$("#badreaction").css({'opacity':'0','transition':'.5s'});},2600);
 
+}
+//day3
 
+function ending3(){
+  var r = document.getElementById('redo');
+  $('#endingloss').css({'display':'block', 'zIndex':'17'});
+  setTimeout(function() {$('#endingloss').css('display','none');},4000);
+  $('#endinglossstay').css({'display':'block', 'zIndex':'16'});
+  $("#dead, #kitchenday3, #brday3, #emptyR").css("display","none");
+  $("#map").toggle();
+  setTimeout(function() {$("#ccmovefeet").css({'opacity':'1','transition':'.5s'});},1000);
+  setTimeout(function() {$("#ccmovefeet").css({'opacity':'0','transition':'.5s'});},2600);
+  setTimeout(function() {$("#ccnews").css({'opacity':'1','transition':'.5s'});},3600);
+  // setTimeout(function() {$("#ccnews").css({'opacity':'0','transition':'.5s'});},2600);
+  setTimeout(function() {r.style.display="block"},4900);
+  setTimeout(function() {r.style.opacity="1"; r.style.transition = ".7s";},7000);
 
 }
+function toEatd3(){
+  $('#kitchenday3').css({'display':'block', 'zIndex':'5'});
+  $("#dead,#brday3, #emptyR").css("display","none");
+  $("#map").toggle();
+  setTimeout(function() {$("#cckitchend3").css({'opacity':'1','transition':'.5s'});},200);
+  setTimeout(function() {$("#cckitchend3").css({'opacity':'0','transition':'.5s'});},2200);
+}
+function toBRd3(){
+  $('#brday3').css({'display':'block', 'zIndex':'5'});
+  $("#dead,#kitchenday3, #emptyR").css("display","none");
+  $("#map").toggle();
+  setTimeout(function() {$("#ccbrday3").css({'opacity':'1','transition':'.5s'});},200);
+  setTimeout(function() {$("#ccbrday3").css({'opacity':'0','transition':'.5s'});},2200);
+}
+function toBed3(){
+  $('#dead').css({'display':'block', 'zIndex':'5'});
+  $("#brday3,#kitchenday3, #emptyR").css("display","none");
+  $("#map").toggle();
+  setTimeout(function() {$("#ccbed3day3").css({'opacity':'1','transition':'.5s'});},200);
+  setTimeout(function() {$("#ccbed3day3").css({'opacity':'0','transition':'.5s'});},2200);
+}
+function notThere(){
+  $('#emptyR').css({'display':'block', 'zIndex':'5'});
+  $("#brday3,#kitchenday3, #dead").css("display","none");
+  $("#map").toggle();
+  setTimeout(function() {$("#ccnotThere").css({'opacity':'1','transition':'.5s'});},200);
+  setTimeout(function() {$("#ccnotThere").css({'opacity':'0','transition':'.5s'});},2200);
+
+}
+
 // endings
 
 function goToEnding1() {
