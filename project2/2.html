@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="box">
+    <img style="position:fixed; z-index:5;" id="endingood" src="gfile/endingood.gif" alt="endingood">
+    <img style="position:fixed" id="endingoodstay" src="gfile/endingoodstay.gif" alt="endingoodstay">
+    <img style="opacity:0; width:80px; height:auto; left:87vw; z-index:22;" class="home" src="imag/gohome.png" alt="gohome" id="redo" onclick="redo()">
+    <img src="imag/1gold.png" id="goGold" alt="goGold" style="position: fixed;z-index:20; display:block; opacity:1;">
+    <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:22; display:none; opacity:0;">
+
+
+  <span id="caption7" class="cap" style="background-color:black;">
+  <i>  never knew life could be so beautiful..</i>
+  </span>
+  <!-- </div> -->
+  <div class="textTop" style=" position:fixed; font-size: 12px">
+      made in 2001
+    </div>
+
+
+
+  </div>
+  <script type="text/javascript">
+  window.onload = function(){
+    $("#goGold").css({'opacity':'.15','transition':'1.2s'})
+    var e =document.getElementById('endingood');
+    var x= document.getElementById('caption7');
+    var r = document.getElementById('redo');
+    e.style.display="block";
+    setTimeout(function() { e.style.display="none"; },4917);
+    setTimeout(function() {x.style.opacity="1"; x.style.transition = "1.5s";},4000);
+    setTimeout(function() {r.style.opacity="1"; r.style.transition = ".7s";},7000);
+}
+  </script>
+
+  <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="imageMapResizer.min.js"></script>
+  <script type="text/javascript"src="jquery.rwdImageMaps.js"></script>
+  <script type="text/javascript" src="imageMap.min.js"></script>
+
+</body>
+</html>

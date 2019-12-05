@@ -7,22 +7,41 @@
 <body>
   <div class="box">
     <img src="imag/homeicon.png" class="home2" alt="homeicon">
-    <img src="gfile/rightafterloop.gif" alt="rightafterloop" style="position:fixed; z-index:2">
     <img src="imag/maplocked.png" id="map2" alt="maplocked" style="position:fixed; z-index:14; display:none" usemap="#maplocked">
     <map name="maplocked">
-      <area shape="rect" coords="437,324,500,386" onclick="toTVn1()">
-      <area shape="circle" coords="793,335,30" onclick="toEatn1()">
-      <area shape="circle" coords="789,439,31" class="bathroom">
-      <area shape="rect" coords="425,455,513,491" onclick="toBedn1()">
+      <area shape="rect" coords="437,324,500,386" class="gbbshow">
+      <area shape="circle" coords="793,335,30" onclick="toEatd2()">
+      <area shape="circle" coords="789,439,31" onclick="toBR2()">
+      <area shape="rect" coords="425,455,513,491" onclick="toBedd2()">
       <area shape="rect" coords="591,393,679,429" onclick="noAccess()">
+    </map>
 
       <map name="switch">
         <area shape="rect" coords="940,280,977,333" onclick="onOff()">
       </map>
+      <div id="caption4" class="cap"style="background-color:black;"> thought could hear someone crying last night.. </div>
+      <img src="gfile/nightmornday1n2.gif" alt="nightmornday1n2" style= "z-index:3; position:fixed;" usemap="#switch">
+      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:block; opacity:1;">
 
+      <img class="room" id="tvday2" src="gfile/tvdday2.gif" alt="tvday2">
+      <img class="room" id="tvday2loop" src="gfile/tvdday2loop.gif" alt="tvday2loop">
+      <img class="room" id="kitchendday2" src="gfile/kitchendday2.gif" alt="kitchendday2">
+      <img class="room" id="brday2" src="gfile/broccupied.gif" alt="broccupied">
+      <img class="room" id="brday2loop" src="gfile/broccupiedloop.gif" alt="broccupiedloop">
+      <img class="room" id="bedroom2" src="gfile/bedroomclickstay2.gif" alt="bedroomclickstay2" usemap="#switch">
+      <img class="room" id="locked" src="imag/locked.png" alt="locked">
 
+      <img src="imag/switchon.png" id="switchon" alt="switchon" usemap="#off">
+        <map name="off">
+          <area shape="rect" coords="544,294,656,400" onclick="turnOff()">
+        </map>
+      <img src="imag/switchoff.png" id="switchoff" alt="switchoff">
 
-    <img class="room" id="locked" src="imag/locked.png" alt="locked">
+      <span class="cap" id="cctvday2" style="background-color:black;">hey, didn't know jon was on this show</span>
+      <span class="cap" id="cctvdaytwo" style="background-color:black;"><i>"its very good jon. its just, the sponginess is not quite there yet.."</i></span>
+      <span class="cap" id="cckitchend2" style="background-color:black;">ok. but i dont know how to cook</span>
+      <span class="cap" id="ccbrday2" style="background-color:black;">shes been in there for hours</span>
+      <span class="cap" id="ccbedroomday2" style="background-color:black;">:0) hehe</span>
 
 
 
@@ -34,6 +53,27 @@
 
 
   </div>
+
+  <script type="text/javascript">
+    window.onload = function(){
+      $("#goDark").css({'opacity':'0','transition':'1s'})
+      setTimeout(function() {$("#goDark").css({'display':'none',});},1100);};
+      var c2= document.getElementById("caption4")
+   c2.style.opacity="1"; c2.style.transition ="1.5s";
+   setTimeout(function() {c2.style.opacity="0"; c2.style.transition ="1s";},2500);
+
+   function turnOff(){
+     $("#switchon").attr('src','imag/switchoff.png');
+     $("#switchon").attr('usemap','none');
+     $("#goDark").css({'display':'block',})
+     setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'3s'});},100);
+
+     setTimeout(function () {
+      window.location.href = "2d3.html";
+   }, 3500);
+   }
+
+  </script>
 
 
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="box">
+    <img src="imag/homeicon.png" class="home" alt="homeicon">
+    <img src="imag/mapunlocked.png" id="map" alt="mapunlocked" style="position:fixed; z-index:14; display:none;" usemap="#mapunlocked">
+      <map name="mapunlocked">
+        <area shape="rect" coords="437,324,500,386" onclick="ending3()">
+        <area shape="circle" coords="793,335,30" onclick="no()">
+        <area shape="circle" coords="789,439,31" onclick="no()">
+        <area shape="rect" coords="425,455,513,491" onclick="no()">
+        <area shape="rect" coords="591,393,679,429" onclick="notThere()">
+      </map>
+
+      <map name="switch">
+        <area shape="rect" coords="940,280,977,333" onclick="onOff()">
+      </map>
+      <div id="caption9" class="cap"style="background-color:black;">another day is upon us </div>
+      <img src="gfile/nightmornday1n2.gif" alt="nightmornday1n2" style= "z-index:3; position:fixed;" usemap="#switch">
+
+      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:23; display:block; opacity:1;">
+
+      <img class="room" id="kitchenday3" src="gfile/kitchenday3.gif" alt="kitchenday3">
+      <img class="room" id="brday3" src="gfile/brday3loop.gif" alt="brday3">
+      <img class="room" id="emptyR" src="imag/empty.png" alt="emptyR">
+
+
+
+      <span class="cap" id="ccno" style="background-color:black;">no i dont want to do anything.</span>
+      <span class="cap" id="ccnotThere" style="background-color:black;">she's not there anymore</span>
+
+
+      <div class="textTop" style=" position:fixed; font-size: 12px">
+      made in 2001
+    </div>
+
+
+  </div>
+
+<script type="text/javascript">
+  window.onload = function(){
+    $("#goDark").css({'opacity':'0','transition':'1s'})
+    setTimeout(function() {$("#goDark").css({'display':'none',});},1100);};
+    var c9= document.getElementById("caption9")
+ c9.style.opacity="1"; c9.style.transition ="1.5s";
+ setTimeout(function() {c9.style.opacity="0"; c9.style.transition ="1s";},1500);
+
+ function turnOff(){
+   $("#switchon").attr('src','imag/switchoff.png');
+   $("#switchon").attr('usemap','none');
+   $("#goDark").css({'display':'block',})
+   setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'3s'});},100);
+
+   setTimeout(function () {
+    window.location.href = "2.html";
+ }, 3500);
+
+ }
+
+</script>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="imageMapResizer.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('map').imageMapResize();
+});
+</script>
+</body>
+</html>
