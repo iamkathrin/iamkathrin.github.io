@@ -523,6 +523,13 @@ function notThere(){
 
 }
 
+
+// 2d3 things
+
+jQuery('#id').click(function(){
+  $(this).data('clicked', true);
+});
+
 // endings
 
 function goToEnding1() {
