@@ -55,7 +55,7 @@
 
 
 
-      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:none; opacity:0;">
+      <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:20; display:block; opacity:1;">
 
 
       <!-- <div id="caption" class="cap" style="top:8vh;">
@@ -69,13 +69,17 @@
 
     </div>
     <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){
     window.onload = function(){
+      $("#goDark").css({'opacity':'0','transition':'1s'})
+      setTimeout(function() {$("#goDark").css({'display':'none',});},1100);
     $('#takeThem').css({'display':'block','zIndex':'7'})
     setTimeout(function() {$("#takeThem").css('display','none');},1000);
     $('#takeThemLoop').css({'display':'block','zIndex':'5'})
     setTimeout(function() {$("#ccbed3day2").css({'opacity':'1','transition':'.5s'});},200);
     setTimeout(function() {$("#ccbed3day2").css({'opacity':'0','transition':'.5s'});},2000);
 }
+});
 
 
   </script>

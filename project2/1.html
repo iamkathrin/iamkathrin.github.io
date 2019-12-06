@@ -25,6 +25,8 @@
 
   </div>
   <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(){
+
   window.onload = function(){
     $("#goGold").css({'opacity':'.15','transition':'1.2s'})
     var e =document.getElementById('endingood');
@@ -35,6 +37,7 @@
     setTimeout(function() {x.style.opacity="1"; x.style.transition = "1.5s";},4000);
     setTimeout(function() {r.style.opacity="1"; r.style.transition = ".7s";},7000);
 }
+});
   </script>
 
   <script type="text/javascript" src="jquery-3.4.1.min.js"></script>

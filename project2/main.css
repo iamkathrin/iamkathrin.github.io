@@ -16,7 +16,7 @@ li a:hover{font-style: italic; }
 
 .cap{
   position:fixed;
-  font-size:20px;
+  font-size:25px;
   color: white;
   z-index: 20;
   max-width: 80%; height: auto;

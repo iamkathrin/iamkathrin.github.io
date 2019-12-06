@@ -47,6 +47,9 @@
 
     </div>
     <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){
+
+
     window.onload = function(){
       $("#goDark").css({'opacity':'0','transition':'1s'})
       setTimeout(function() {$("#goDark").css({'display':'none',});},1100);
@@ -56,6 +59,7 @@
    c3.style.opacity="1"; c3.style.transition ="2s";
    setTimeout(function() {c3.style.opacity="0"; c3.style.transition ="1s";},4000);
   };
+  });
   </script>
 
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>

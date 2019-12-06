@@ -41,11 +41,11 @@
     <div id="caption2" class="cap"style="background-color:black;"> oh no    </div>
 
     <span id="cctvday1" class="cap" style="background-color:black;"> :( sad </span>
-    <span id="cckitchenday1" class="cap" style="background-color:black;"> "dear mom, these days have been t.."</span>
-    <span id="ccbrday1" class="cap" style="background-color:black;"> huh thats me </span>
+    <span id="cckitchenday1" class="cap" style="background-color:black;"> "dear mom, i have been thinking a lot about what you said the other day.."</span>
+    <span id="ccbrday1" class="cap" style="background-color:black;"> o dear </span>
     <span id="ccbrdayone" class="cap" style="background-color:black;"> do i really look like that? </span>
     <span id="ccbedroomday1" class="cap" style="background-color:black;">if i turn off the lights, maybe i can get to sleep</span>
-    <span id="ccherroomday1" class="cap" style="background-color:black;">lets not bother her tonight</span>
+    <span id="ccherroomday1" class="cap" style="background-color:black;">i dont want to bother her tonight</span>
 
   <div class="textTop" style=" position:fixed; font-size: 12px">
       made in 2001
@@ -56,6 +56,7 @@
   </div>
 
   <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(){
   window.onload = function(){
     var c2= document.getElementById("caption2")
     var b1= document.getElementById('kickbedloop');
@@ -63,22 +64,25 @@
  c2.style.opacity="1"; c2.style.transition ="1s";
  setTimeout(function() {c2.style.opacity="0"; c2.style.transition ="1s";},1550);
  };
- function turnOff(){
-   $("#switchon").attr('src','imag/switchoff.png');
-   $("#switchon").attr('usemap','none');
-   $("#goDark").css({'display':'block',})
-   setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'3s'});},100);
 
-   setTimeout(function () {
-    window.location.href = "1n1.html";
- }, 3500);
- }
+
+});
 
 </script>
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="imageMapResizer.min.js"></script>
 <script type="text/javascript">
+function turnOff(){
+  $("#switchon").attr('src','imag/switchoff.png');
+  $("#switchon").attr('usemap','none');
+  $("#goDark").css({'display':'block',})
+  setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'3s'});},100);
+
+  setTimeout(function () {
+   window.location.href = "1n1.html";
+}, 3500);
+}
 $(document).ready(function() {
   $('map').imageMapResize();
 });

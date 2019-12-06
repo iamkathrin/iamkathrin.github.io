@@ -435,7 +435,7 @@ function toBedn2(){
 
     function timerIncrement() {
         idleTime = idleTime + 1;
-        if (idleTime > 5) {
+        if (idleTime > 7) {
           $("#goDark").css({'display':'block',})
             setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'1s'});},10);
            setTimeout(function() {
@@ -498,10 +498,10 @@ function ending3(){
 }
 function toEatd3(){
   $('#kitchenday3').css({'display':'block', 'zIndex':'5'});
-  $("#dead,#brday3, #emptyR, #tv2d3,").css("display","none");
+  $("#dead,#brday3, #emptyR, #tv2d3, #kitchen2d3").css("display","none");
   $("#map").toggle();
-  setTimeout(function() {$("#cckitchend3").css({'opacity':'1','transition':'.5s'});},200);
-  setTimeout(function() {$("#cckitchend3").css({'opacity':'0','transition':'.5s'});},2200);
+  setTimeout(function() {$("#cckitchend33").css({'opacity':'1','transition':'.5s'});},200);
+  setTimeout(function() {$("#cckitchend33").css({'opacity':'0','transition':'.5s'});},2200);
 }
 function toEat2d3() {
   $('#kitchen2d3').css({'display':'block', 'zIndex':'5'});
@@ -523,6 +523,13 @@ function toBed3(){
   $("#map").toggle();
   setTimeout(function() {$("#ccbed3day3").css({'opacity':'1','transition':'.5s'});},200);
   setTimeout(function() {$("#ccbed3day3").css({'opacity':'0','transition':'.5s'});},2200);
+}
+function notThere3(){
+  $('#emptyR').css({'display':'block', 'zIndex':'5'});
+  $("#brday3,#kitchenday3, #dead, #tv2d3, #kitchen2d3").css("display","none");
+  $("#map").toggle();
+  setTimeout(function() {$("#ccnotThere3").css({'opacity':'1','transition':'1s'});},500);
+  setTimeout(function() {$("#ccnotThere3").css({'opacity':'0','transition':'.5s'});},3500);
 }
 function notThere(){
   $('#emptyR').css({'display':'block', 'zIndex':'5'});
