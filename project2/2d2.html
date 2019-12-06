@@ -63,16 +63,7 @@
    c2.style.opacity="1"; c2.style.transition ="1.5s";
    setTimeout(function() {c2.style.opacity="0"; c2.style.transition ="1s";},2500);
 
-   function turnOff(){
-     $("#switchon").attr('src','imag/switchoff.png');
-     $("#switchon").attr('usemap','none');
-     $("#goDark").css({'display':'block',})
-     setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'3s'});},100);
 
-     setTimeout(function () {
-      window.location.href = "2d3.html";
-   }, 3500);
-   }
  });
 
   </script>
@@ -81,5 +72,21 @@
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="imageMapResizer.min.js"></script>
+<script type="text/javascript">
+function turnOff(){
+  $("#switchon").attr('src','imag/switchoff.png');
+  $("#switchon").attr('usemap','none');
+  $("#goDark").css({'display':'block',})
+  setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'3s'});},100);
+
+  setTimeout(function () {
+   window.location.href = "2d3.html";
+}, 3500);
+}
+$(document).ready(function() {
+$('map').imageMapResize();
+});
+
+</script>
 </body>
 </html>
