@@ -20,7 +20,7 @@
   <div class="textTop" style=" position:fixed; font-size: 12px">
       made in 2001
     </div>
-<span style=" position:fixed;
+<span id="cap10" style=" position:fixed;
   font-size:40px;
   color: white;
   z-index: 19;
@@ -37,6 +37,7 @@
   window.onload = function(){
     $("#goDark").css({'opacity':'.0','transition':'1.2s'})
     setTimeout(function() {$("#goDark").css({'display':'none',});},1250);
+    setTimeout(function() {$("#cap10").css({'opacity':'.0','transition':'.5s'});},2000);
     var e =document.getElementById('endingreg');
     var x= document.getElementById('caption7');
     var r = document.getElementById('redo');
