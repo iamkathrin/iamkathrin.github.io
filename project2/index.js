@@ -150,6 +150,9 @@ $(".home").css('display','none');
 
 
 // first night
+function showBook(){
+  $('#page').toggle();
+}
 
 function toccTV() {
   $("#cctvnight1").css({'opacity':'1','transition':'.5s'});
@@ -495,35 +498,35 @@ function ending3(){
 }
 function toEatd3(){
   $('#kitchenday3').css({'display':'block', 'zIndex':'5'});
-  $("#dead,#brday3, #emptyR, #tv2d3").css("display","none");
+  $("#dead,#brday3, #emptyR, #tv2d3,").css("display","none");
   $("#map").toggle();
   setTimeout(function() {$("#cckitchend3").css({'opacity':'1','transition':'.5s'});},200);
   setTimeout(function() {$("#cckitchend3").css({'opacity':'0','transition':'.5s'});},2200);
 }
 function toEat2d3() {
   $('#kitchen2d3').css({'display':'block', 'zIndex':'5'});
-  $("#dead,#brday3, #emptyR, #tv2d3").css("display","none");
+  $("#dead,#kitchenday3, #emptyR, #tv2d3, #brday3").css("display","none");
   $("#map").toggle();
   setTimeout(function() {$("#cckitchend3").css({'opacity':'1','transition':'.5s'});},200);
   setTimeout(function() {$("#cckitchend3").css({'opacity':'0','transition':'.5s'});},2200);
 }
 function toBRd3(){
   $('#brday3').css({'display':'block', 'zIndex':'5'});
-  $("#dead,#kitchenday3, #emptyR, #tv2d3").css("display","none");
+  $("#dead,#kitchenday3, #emptyR, #tv2d3, #kitchen2d3").css("display","none");
   $("#map").toggle();
   setTimeout(function() {$("#ccbrday3").css({'opacity':'1','transition':'.5s'});},200);
   setTimeout(function() {$("#ccbrday3").css({'opacity':'0','transition':'.5s'});},2200);
 }
 function toBed3(){
   $('#dead').css({'display':'block', 'zIndex':'5'});
-  $("#brday3,#kitchenday3, #emptyR, #tv2d3").css("display","none");
+  $("#brday3,#kitchenday3, #emptyR, #tv2d3, #kitchen2d3").css("display","none");
   $("#map").toggle();
   setTimeout(function() {$("#ccbed3day3").css({'opacity':'1','transition':'.5s'});},200);
   setTimeout(function() {$("#ccbed3day3").css({'opacity':'0','transition':'.5s'});},2200);
 }
 function notThere(){
   $('#emptyR').css({'display':'block', 'zIndex':'5'});
-  $("#brday3,#kitchenday3, #dead, #tv2d3").css("display","none");
+  $("#brday3,#kitchenday3, #dead, #tv2d3, #kitchen2d3").css("display","none");
   $("#map").toggle();
   setTimeout(function() {$("#ccnotThere").css({'opacity':'1','transition':'1s'});},500);
   setTimeout(function() {$("#ccnotThere").css({'opacity':'0','transition':'.5s'});},3500);

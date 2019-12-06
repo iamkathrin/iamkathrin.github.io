@@ -18,6 +18,7 @@
         </map>
       <img src="gfile/openeyes.gif" id="openeyes"alt="openeyes" style= "z-index:3; position:fixed;">
       <img src="gfile/openeyesloop.gif" id="openeyesloop"alt="openeyesloop" style= "z-index:4; display: none;position:fixed;">
+      <img src="imag/page.png" id="page"alt="page" style="height:80vh; width:auto; position:fixed; z-index:7; border:solid; display:none; opacity:1;">
         <map name="switch">
           <area shape="rect" coords="940,280,977,333" onclick="onOff()">
         </map>
@@ -29,7 +30,12 @@
         <img class="room" id="n2you"src="gfile/day2you.gif" alt="day2you">
         <img class="room" id="n2youloop"src="gfile/day2youloop.gif" alt="day2youloop">
         <img class="room" id="brnight2"src="gfile/brday2loop.gif" alt="kitchennight2">
-        <img class="room" id="bedn2"src="gfile/night1n2loop.gif" alt="night1n2loop">
+        <img class="room" id="bedn2"src="gfile/night1n2loop2.gif" alt="night1n2loop2" usemap="#book">
+
+        <map name="book">
+          <area id="book2"shape="poly" coords="179,386,243,409,260,403,267,423,269,398,299,386,296,373,224,362" onclick="showBook()">
+        </map>
+
         <img class="room" id="herroomn2" src="gfile/joinherloopfar.gif" alt="joinherloopfar" usemap="#joinHer">
           <map name="joinHer">
             <area shape="poly" coords="427,669,480,654,430,628,434,568,471,506,537,426,589,
