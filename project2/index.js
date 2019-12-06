@@ -230,7 +230,7 @@ var clicks =0;
        $('#tvday2loop').css({'display':'block', 'zIndex':'5'});
        setTimeout(function(){$('#tvday2').css({'display':'block', 'zIndex':'6'});},1000);
        setTimeout(function(){$('#tvday2').css('display','none');},1980);
-       $("#bedroom2, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk, #smell, #emptyT, #takeThemLoop").css("display","none");
+       $("#bedroom2, #brday2, #brday2loop, #kitchendday2, #herRoom2,#trunk, #smell, #emptyT, #takeThemLoop,#choiceBox2").css("display","none");
        $("#map").toggle();
        $("#map2").toggle();
        setTimeout(function() {$("#cctvday2").css({'opacity':'1','transition':'.5s'});},600);
@@ -238,7 +238,7 @@ var clicks =0;
 
      }else{
        $('#tvday2loop').css({'display':'block', 'zIndex':'5'});
-       $("#bedroom2, #brday2, #brday2loop, #trunk,#kitchendday2, #herRoom2, #trunk, #smell, #emptyT, #takeThemLoop").css("display","none");
+       $("#bedroom2, #brday2, #brday2loop, #trunk,#kitchendday2, #herRoom2, #trunk, #smell, #emptyT, #takeThemLoop,#choiceBox2").css("display","none");
        $("#map").toggle();
        $("#map2").toggle();
        setTimeout(function() {$("#cctvdaytwo").css({'opacity':'1','transition':'.5s'});},600);
@@ -250,7 +250,7 @@ var clicks =0;
   function toEatd2(){
     $("#kitchendday2").css("display","block");
     $("#kitchendday2").css("zIndex","5");
-    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #bedroom2, #herRoom2,#trunk,#smell, #emptyT, #takeThemLoop").css("display","none");
+    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #bedroom2, #herRoom2,#trunk,#smell, #emptyT, #takeThemLoop,#choiceBox2").css("display","none");
     $("#map").toggle();
     $("#map2").toggle();
     setTimeout(function() {$("#cckitchend2").css({'opacity':'1','transition':'.5s'});},1000);
@@ -265,7 +265,7 @@ var clicks =0;
         $("#brday2loop").css("zIndex","5");
         setTimeout(function(){$('#brday2').css('display','none');},1000);
         setTimeout(function(){$('#brday2loop').css('display','block');},1000);
-        $("#tvday2,#tvday2loop,#bedroom2, #kitchendday2, #herRoom2,#trunk, #smell,#emptyT , #takeThemLoop").css("display","none");
+        $("#tvday2,#tvday2loop,#bedroom2, #kitchendday2, #herRoom2,#trunk, #smell,#emptyT , #takeThemLoop,#choiceBox2").css("display","none");
         $("#map").toggle();
         $("#map2").toggle();
          setTimeout(function() {$("#ccbrday2").css({'opacity':'1','transition':'.5s'});},1000);
@@ -303,7 +303,7 @@ var clicks =0;
   function toHerd2(){
     $("#herRoom2").css("display","block");
     $("#herRoom2").css("zIndex","5");
-    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #bedroom2,#trunk, #smell, #emptyT, #takeThemLoop").css("display","none");
+    $("#tvday2,#tvday2loop, #brday2, #brday2loop, #kitchendday2, #bedroom2,#trunk, #smell, #emptyT, #takeThemLoop,#choiceBox2").css("display","none");
     $("#map").toggle();
     $("#map2").toggle();
     setTimeout(function() {$("#ccherroomday2").css({'opacity':'1','transition':'.5s'});},200);
@@ -347,7 +347,7 @@ function emptyT(){
         }else{
           $('#smell').css({'zIndex':'10','display':'block'});
           setTimeout(function() {$("#smell").attr('src','gfile/smellloop.gif');},2500);
-          $('#trunk, #caption5').css('display','none');
+          $('#trunk, #caption5, #choiceBox2').css('display','none');
           $('#choiceBox2').css({'opacity':"0", 'transition':'.5s'});
           setTimeout(function() {$("#captionsix").css({'opacity':'1','transition':'.5s'});},0);
           setTimeout(function() {$("#captionsix").css({'opacity':'0','transition':'.5s'});},2600);
@@ -432,11 +432,11 @@ function toBedn2(){
 
     function timerIncrement() {
         idleTime = idleTime + 1;
-        if (idleTime > 7) {
+        if (idleTime > 5) {
           $("#goDark").css({'display':'block',})
             setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'1s'});},10);
            setTimeout(function() {
-             window.location.href ="3n2.html";
+             window.location.href ="2d3.html";
            },1500)
         }}
 
@@ -483,7 +483,7 @@ function ending3(){
   $('#endingloss').css({'display':'block', 'zIndex':'17'});
   setTimeout(function() {$('#endingloss').css('display','none');},4000);
   $('#endinglossstay').css({'display':'block', 'zIndex':'16'});
-  $("#dead, #kitchenday3, #brday3, #emptyR").css("display","none");
+  $("#dead, #kitchenday3, #brday3, #emptyR, #tvnight2, #tv2d3").css("display","none");
   $("#map").toggle();
   setTimeout(function() {$("#ccmovefeet").css({'opacity':'1','transition':'.5s'});},1000);
   setTimeout(function() {$("#ccmovefeet").css({'opacity':'0','transition':'.5s'});},2600);
@@ -495,41 +495,77 @@ function ending3(){
 }
 function toEatd3(){
   $('#kitchenday3').css({'display':'block', 'zIndex':'5'});
-  $("#dead,#brday3, #emptyR").css("display","none");
+  $("#dead,#brday3, #emptyR, #tv2d3").css("display","none");
+  $("#map").toggle();
+  setTimeout(function() {$("#cckitchend3").css({'opacity':'1','transition':'.5s'});},200);
+  setTimeout(function() {$("#cckitchend3").css({'opacity':'0','transition':'.5s'});},2200);
+}
+function toEat2d3() {
+  $('#kitchen2d3').css({'display':'block', 'zIndex':'5'});
+  $("#dead,#brday3, #emptyR, #tv2d3").css("display","none");
   $("#map").toggle();
   setTimeout(function() {$("#cckitchend3").css({'opacity':'1','transition':'.5s'});},200);
   setTimeout(function() {$("#cckitchend3").css({'opacity':'0','transition':'.5s'});},2200);
 }
 function toBRd3(){
   $('#brday3').css({'display':'block', 'zIndex':'5'});
-  $("#dead,#kitchenday3, #emptyR").css("display","none");
+  $("#dead,#kitchenday3, #emptyR, #tv2d3").css("display","none");
   $("#map").toggle();
   setTimeout(function() {$("#ccbrday3").css({'opacity':'1','transition':'.5s'});},200);
   setTimeout(function() {$("#ccbrday3").css({'opacity':'0','transition':'.5s'});},2200);
 }
 function toBed3(){
   $('#dead').css({'display':'block', 'zIndex':'5'});
-  $("#brday3,#kitchenday3, #emptyR").css("display","none");
+  $("#brday3,#kitchenday3, #emptyR, #tv2d3").css("display","none");
   $("#map").toggle();
   setTimeout(function() {$("#ccbed3day3").css({'opacity':'1','transition':'.5s'});},200);
   setTimeout(function() {$("#ccbed3day3").css({'opacity':'0','transition':'.5s'});},2200);
 }
 function notThere(){
   $('#emptyR').css({'display':'block', 'zIndex':'5'});
-  $("#brday3,#kitchenday3, #dead").css("display","none");
+  $("#brday3,#kitchenday3, #dead, #tv2d3").css("display","none");
   $("#map").toggle();
-  setTimeout(function() {$("#ccnotThere").css({'opacity':'1','transition':'.5s'});},200);
-  setTimeout(function() {$("#ccnotThere").css({'opacity':'0','transition':'.5s'});},2200);
+  setTimeout(function() {$("#ccnotThere").css({'opacity':'1','transition':'1s'});},500);
+  setTimeout(function() {$("#ccnotThere").css({'opacity':'0','transition':'.5s'});},3500);
 
+  $('#map').attr('usemap','#mapunlocked2');
 }
 
 
 // 2d3 things
+function no(){
+setTimeout(function() {$("#ccno").css({'opacity':'1','transition':'.5s'});},0);
+setTimeout(function() {$("#ccno").css({'opacity':'0','transition':'.5s'});},1500);
+}
 
-jQuery('#id').click(function(){
-  $(this).data('clicked', true);
-});
+function toBed2d3(){
+  if (cliks==0){
+    $('#bed2d3').css({'display':'block', 'zIndex':'6'});
+    setTimeout(function() {$('#bed2d3').css('display','none');},1000);
+    $('#bed2d3loop').css({'display':'block', 'zIndex':'5'});
+    $("#map").toggle();
+    $("#emptyR").css("display","none");
+    setTimeout(function() {$("#ccbad").css({'opacity':'1','transition':'.5s'});},200);
+    setTimeout(function() {$("#ccbad").css({'opacity':'0','transition':'.5s'});},2200);
 
+  }else{
+    $('#bed2d3loop').css({'display':'block', 'zIndex':'5'});
+    $("#map").toggle();
+    $("#emptyR").css("display","none");
+    setTimeout(function() {$("#ccbad").css({'opacity':'1','transition':'.5s'});},200);
+    setTimeout(function() {$("#ccbad").css({'opacity':'0','transition':'.5s'});},2200);
+
+  }
+  ++cliks;
+  };
+
+  function toTV2d3() {
+    $('#tv2d3').css({'display':'block', 'zIndex':'5'});
+    $("#dead,#brday3, #emptyR,#kitchenday3").css("display","none");
+    $("#map").toggle();
+    setTimeout(function() {$("#cctv3d2").css({'opacity':'1','transition':'.5s'});},200);
+    setTimeout(function() {$("#cctv3d2").css({'opacity':'0','transition':'.5s'});},2200);
+  }
 // endings
 
 function goToEnding1() {

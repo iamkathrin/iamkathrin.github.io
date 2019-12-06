@@ -9,10 +9,17 @@
     <img src="imag/homeicon.png" class="home" alt="homeicon">
     <img src="imag/mapunlocked.png" id="map" alt="mapunlocked" style="position:fixed; z-index:14; display:none;" usemap="#mapunlocked">
       <map name="mapunlocked">
-        <area shape="rect" coords="437,324,500,386" onclick="ending3()">
+        <area shape="rect" coords="437,324,500,386" onclick="toTV2d3()">
+        <area shape="circle" coords="793,335,30" onclick="toEat2d3()">
+        <area shape="circle" coords="789,439,31" onclick="toBRd3()">
+        <area shape="rect" coords="425,455,513,491" onclick="toBed3()">
+        <area shape="rect" id ="visited" coords="591,393,679,429" onclick="notThere()">
+      </map>
+      <map name="mapunlocked2">
+        <area shape="rect" coords="437,324,500,386" onclick="no()">
         <area shape="circle" coords="793,335,30" onclick="no()">
         <area shape="circle" coords="789,439,31" onclick="no()">
-        <area shape="rect" coords="425,455,513,491" onclick="no()">
+        <area shape="rect" coords="425,455,513,491" onclick="toBed2d3()">
         <area shape="rect" coords="591,393,679,429" onclick="notThere()">
       </map>
 
@@ -20,18 +27,29 @@
         <area shape="rect" coords="940,280,977,333" onclick="onOff()">
       </map>
       <div id="caption9" class="cap"style="background-color:black;">another day is upon us </div>
-      <img src="gfile/nightmornday1n2.gif" alt="nightmornday1n2" style= "z-index:3; position:fixed;" usemap="#switch">
+      <img src="gfile/nightmornday1n2.gif" alt="nightmornday1n2" style= "z-index:3; position:fixed;">
 
       <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:23; display:block; opacity:1;">
 
-      <img class="room" id="kitchenday3" src="gfile/kitchenday3.gif" alt="kitchenday3">
+      <img class="room" id="kitchen2d3" src="gfile/kitchen2d3.gif" alt="kitchen2d3">
       <img class="room" id="brday3" src="gfile/brday3loop.gif" alt="brday3">
       <img class="room" id="emptyR" src="imag/empty.png" alt="emptyR">
+      <img class="room" id="tv2d3" src="gfile/tv2d3.gif" alt="tv2d3">
+      <img class="room" id="bed2d3" src="gfile/bed2d3.gif" alt="bed2d3" usemap="#switch">
+      <img class="room" id="bed2d3loop" src="gfile/bed2d3loop.gif" alt="bed2d3loop" usemap="#switch">
+      <img src="imag/switchon.png" id="switchon" alt="switchon" usemap="#off">
+        <map name="off">
+          <area shape="rect" coords="544,294,656,400" onclick="turnOff()">
+        </map>
+      <img src="imag/switchoff.png" id="switchoff" alt="switchoff">
 
 
-
-      <span class="cap" id="ccno" style="background-color:black;">no i dont want to do anything.</span>
-      <span class="cap" id="ccnotThere" style="background-color:black;">she's not there anymore</span>
+      <span class="cap" id="cckitchend3" style="background-color:black;">dont feel too good</span>
+      <span class="cap" id="ccbrday3" style="background-color:black;"> /pitter patter/</span>
+      <span class="cap" id="ccno" style="background-color:black;"> no.</span>
+      <span class="cap" id="ccbad" style="background-color:black;">i feel horrible. i dont want to move.</span>
+      <span class="cap" id="ccnotThere" style="background-color:black;">oh  ,she's left</span>
+      <span class="cap" id="cctv3d2" style="background-color:black;">this is such a waste of time</span>
 
 
       <div class="textTop" style=" position:fixed; font-size: 12px">
