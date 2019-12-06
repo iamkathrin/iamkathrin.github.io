@@ -10,7 +10,7 @@
     <img style="position:fixed" id="endingregstay" src="gfile/endingregstay.gif" alt="endingregstay">
     <img style="opacity:0; width:80px; height:auto; left:87vw; z-index:22;" class="home" src="imag/gohome.png" alt="gohome" id="redo" onclick="redo()">
 
-    <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:22; display:none; opacity:0;">
+    <img src="imag/1black.png" id="goDark" alt="goDark" style="position: fixed;z-index:22; display:block; opacity:1;">
 
 
   <span id="caption7" class="cap" style="background-color:black;">
@@ -20,16 +20,27 @@
   <div class="textTop" style=" position:fixed; font-size: 12px">
       made in 2001
     </div>
-
+<span style=" position:fixed;
+  font-size:40px;
+  color: white;
+  z-index: 19;
+  max-width: 80%; height: auto;
+  text-align:center;
+  bottom: 50vh;
+  opacity: 1;
+  background-color:black;
+  user-select: none;"><i>1 month later </i></span>
 
 
   </div>
   <script type="text/javascript">
   window.onload = function(){
+    $("#goDark").css({'opacity':'.0','transition':'1.2s'})
+    setTimeout(function() {$("#goDark").css({'display':'none',});},1250);
     var e =document.getElementById('endingreg');
     var x= document.getElementById('caption7');
     var r = document.getElementById('redo');
-    setTimeout(function() { e.style.display="none"; },3600);
+    setTimeout(function() { e.style.display="none"; },3500);
     setTimeout(function() {x.style.opacity="1"; x.style.transition = "1.5s";},4000);
     setTimeout(function() {r.style.opacity="1"; r.style.transition = ".7s";},7000);
 }
