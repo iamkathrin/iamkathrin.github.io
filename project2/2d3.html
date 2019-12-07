@@ -68,17 +68,7 @@ document.addEventListener("DOMContentLoaded", function(){
  c9.style.opacity="1"; c9.style.transition ="1.5s";
  setTimeout(function() {c9.style.opacity="0"; c9.style.transition ="1s";},1500);
 
- function turnOff(){
-   $("#switchon").attr('src','imag/switchoff.png');
-   $("#switchon").attr('usemap','none');
-   $("#goDark").css({'display':'block',})
-   setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'3s'});},100);
 
-   setTimeout(function () {
-    window.location.href = "2.html";
- }, 3500);
-
- }
 });
 
 </script>
@@ -86,6 +76,17 @@ document.addEventListener("DOMContentLoaded", function(){
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="imageMapResizer.min.js"></script>
 <script type="text/javascript">
+function turnOff(){
+  $("#switchon").attr('src','imag/switchoff.png');
+  $("#switchon").attr('usemap','none');
+  $("#goDark").css({'display':'block',})
+  setTimeout(function() {$("#goDark").css({'opacity':'1','transition':'3s'});},100);
+
+  setTimeout(function () {
+   window.location.href = "2.html";
+}, 3500);
+
+}
 $(document).ready(function() {
   $('map').imageMapResize();
 });

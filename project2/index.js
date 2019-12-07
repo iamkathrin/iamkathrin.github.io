@@ -44,6 +44,8 @@ function playTransition2(){
   var e5= document.getElementById('herClose');
   setTimeout(function () {e5.style.display="block";},2666);
   setTimeout(function() {c1.style.opacity="0"; c1.style.transition ="1s";},0);
+  var audio = document.getElementById("doorbell");
+       audio.play();
 }
 
 function goTo1d1() {
