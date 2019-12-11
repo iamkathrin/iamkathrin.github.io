@@ -17,7 +17,7 @@
   <i>  </i>
   </span>
   <!-- </div> -->
-  <div class="textTop" style=" position:fixed; font-size: 12px">
+  <div class="textTop" style=" position:fixed; font-size: 12px; z-index:25;">
       made in 2001
     </div>
 <span id="cap10" style=" position:fixed;
@@ -30,15 +30,32 @@
   opacity: 1;
   background-color:black;
   user-select: none;"><i>1 month later </i></span>
+  <!-- <audio id="end2" src="sound/endingreg.mp3" muted="muted" autoplay></audio> -->
+
+  <iframe src="sound/endingreg.mp3" allow="autoplay" style="display:none" id="endingregsound">
+  </iframe>
+  <audio autoplay  id="playAudio">
+      <source src="sound/endingreg.mp3">
+    </audio>
+
 
 
   </div>
   <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function(){
   window.onload = function(){
+    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#endingregsound').remove()
+    }
+  else{
+     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background
+  }
+
     $("#goDark").css({'opacity':'.0','transition':'1.2s'})
     setTimeout(function() {$("#goDark").css({'display':'none',});},1250);
     setTimeout(function() {$("#cap10").css({'opacity':'.0','transition':'.5s'});},2000);
+
     var e =document.getElementById('endingreg');
     var x= document.getElementById('caption7');
     var r = document.getElementById('redo');

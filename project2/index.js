@@ -1,4 +1,5 @@
 
+// document.getElementById("noise").loop = true;
 function sizeUp() {
     $('#workmap').css({'cursor': 'pointer'});
 }
@@ -22,9 +23,12 @@ function playTransition() {
   var e3= document.getElementById("entranceGirl");
   var e4= document.getElementById("entranceLoop");
   var c1= document.getElementById("caption")
+  var audio = document.getElementById("doorbell");
+
   // elem.style.transform = "scale(1,1)"
   elem.setAttribute("usemap","none");
   elem.src = "gfile/gottatry.gif";
+  setTimeout(function() { audio.play(); },1500);
   setTimeout(function() { e2.style.display="block"; },1500);
   setTimeout(function(){e3.style.display="block";},1500);
   setTimeout(function(){e3.style.display="none";},3600);
@@ -44,8 +48,7 @@ function playTransition2(){
   var e5= document.getElementById('herClose');
   setTimeout(function () {e5.style.display="block";},2666);
   setTimeout(function() {c1.style.opacity="0"; c1.style.transition ="1s";},0);
-  var audio = document.getElementById("doorbell");
-       audio.play();
+
 }
 
 function goTo1d1() {
