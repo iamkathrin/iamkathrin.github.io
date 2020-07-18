@@ -43,14 +43,9 @@
   </div>
   <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function(){
+
   window.onload = function(){
-    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    if(!isChrome){
-      $('#endingregsound').remove()
-    }
-  else{
-     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background
-  }
+
 
     $("#goDark").css({'opacity':'.0','transition':'1.2s'})
     setTimeout(function() {$("#goDark").css({'display':'none',});},1250);

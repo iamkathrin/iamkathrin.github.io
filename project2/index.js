@@ -1,5 +1,12 @@
 
 // document.getElementById("noise").loop = true;
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+if(!isChrome){
+  $('#endingregsound').remove()
+}
+else{
+ $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background
+}
 function sizeUp() {
     $('#workmap').css({'cursor': 'pointer'});
 }
@@ -28,8 +35,7 @@ function playTransition() {
   // elem.style.transform = "scale(1,1)"
   elem.setAttribute("usemap","none");
   elem.src = "gfile/gottatry.gif";
-  setTimeout(function() { audio.play(); },1500);
-  setTimeout(function() { e2.style.display="block"; },1500);
+  setTimeout(function() { e2.style.display="block"; audio.play(); },1500);
   setTimeout(function(){e3.style.display="block";},1500);
   setTimeout(function(){e3.style.display="none";},3600);
   setTimeout(function() { e4.style.display="block"; },3600);
