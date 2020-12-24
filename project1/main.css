@@ -168,9 +168,8 @@ img.thumbnail{ height: 100%; width: 100%;
   z-index: 7;
 }
 div.mySlides{
-  padding:100px;
-  line-height: 150%;
-  margin: auto;
+  padding:6px;
+   margin: auto;
 }
 div.mySlides2{
   text-align: center;
