@@ -204,3 +204,7 @@ img.mySlides{
 .right:hover{
   cursor:pointer
 }
+video {
+  width: 100%;
+  height: auto;
+}
